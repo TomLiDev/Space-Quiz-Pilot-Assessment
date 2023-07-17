@@ -1,3 +1,16 @@
 body {
     background-color: red;
 }
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 200%;
+}
+
+.nav-items {
+    padding: 30px;
+}
