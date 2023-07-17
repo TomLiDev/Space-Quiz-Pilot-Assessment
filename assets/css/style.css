@@ -10,36 +10,69 @@ body {
 #nav-bar {
     display: flex;
     flex-direction: row;
-    height: 80px;
+    height: 100px;
     align-items: center;
     justify-content: space-between;
     font-size: 200%;
+    background-color: black;
+    color: aliceblue;
 }
 
 .nav-items {
     padding: 30px;
     text-decoration: none;
+    color: aliceblue;
+}
+
+#home-icon {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 180%;
+}
+
+#logo {
+    background-image: url(../images/earth-icon2.webp);
+    width: 60px;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #start-menu {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 60px;
 }
 
 #start-menu-container {
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
-    width: 80%;
+    background-color: rgba(240, 248, 255, 0.7);
+    width: 60%;
     justify-content: center;
     align-items: center;
     height: 500px;
+    border-radius: 50px;
 }
 
 #start-menu-items {
     display: flex;
     flex-direction: column;
+}
+
+#start-menu-container>h2 {
+    font-size: 300%;
+    padding-bottom: 60px;
+}
+
+.start-buttons {
+    height: 60px;
+    width: 400px;
+    margin: 10px;
 }
 
 #footer-container {
