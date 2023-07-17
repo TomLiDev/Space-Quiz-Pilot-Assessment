@@ -13,4 +13,26 @@ body {
 
 .nav-items {
     padding: 30px;
+    text-decoration: none;
+}
+
+#start-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-menu-container {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#start-menu-items {
+    display: flex;
+    flex-direction: column;
 }
