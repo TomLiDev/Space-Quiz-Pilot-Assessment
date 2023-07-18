@@ -163,11 +163,15 @@ body {
         padding: 50px;
     }
 
+    #footer-container {
+        margin-top: 50px;
+    }
+
 }
 
-/** Media query for screens smaller than 600px */
+/** Media query for screens smaller than 500px */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 
     .nav-items {
         padding: 20px;
@@ -179,9 +183,9 @@ body {
 
     #footer-container {
         font-size: 250%;
-        margin-top: 50px;
     }
 
     #footer-container>a {
         padding: 30px;
     }
+}
