@@ -78,6 +78,8 @@ body {
     align-items: center;
     height: 500px;
     border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #start-menu-items {
@@ -114,7 +116,7 @@ body {
     flex-direction: row;
     justify-content: center;
     font-size: 300%;
-    height: 80px;
+    height: auto;
     margin-top: 100px;
 }
 
@@ -136,6 +138,10 @@ body {
         flex-direction: column;
     }
 
+    #start-menu-container {
+        width: 80%;
+    }
+
     #start-menu-container>h2 {
         font-size: 250%;
         padding-bottom: 20px;
@@ -153,4 +159,29 @@ body {
         font-size: 150%;
     }
 
+    #footer-container>a {
+        padding: 50px;
+    }
+
 }
+
+/** Media query for screens smaller than 600px */
+
+@media screen and (max-width: 600px) {
+
+    .nav-items {
+        padding: 20px;
+    }
+
+    #nav-bar {
+        font-size: 150%;
+    }
+
+    #footer-container {
+        font-size: 250%;
+        margin-top: 50px;
+    }
+
+    #footer-container>a {
+        padding: 30px;
+    }
