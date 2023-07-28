@@ -1,10 +1,5 @@
 
-let questionBank = ["Which planet was declassified from a planet to a dwarf planet in 2006?", "How many moons does Jupiter have?", 'text', 'moretext'];
-const questionBank2 = [];
-questionBank2[0] = 'I love questions';
-questionBank2[1] = 'I hate questions';
-
-const questionBankFull = [
+const questionBank = [
     {
         questionText: "Which planet was declassified from a planet to a dwarf planet in 2006?",
         answer1: "Mercury",
@@ -12,25 +7,35 @@ const questionBankFull = [
         answer3: "Pluto"
     },
     {
-        questionText: "Second bitching question",
-        answer1: "moreballs",
-        answer2: "slut",
-        answer3: "donkey"
+        questionText: "What is the third planet for the Sun?",
+        answer1: "Earth",
+        answer2: "Venus",
+        answer3: "Jupiter"
+    },
+    {
+        questionText: "What is the largest planet in the solar system?",
+        answer1: "Earth",
+        answer2: "Venus",
+        answer3: "Jupiter"
     }
 ];
 
 /**  Overall run game function */
 
 document.addEventListener("DOMContentLoaded", function () {
-    let firstQuestion = questionBank[0];
+    let n = Math.floor(Math.random() * 2) + 1;
+    let firstQuestion = questionBank[n].questionText;
     document.getElementById("question-text").innerHTML = firstQuestion;
+    document.getElementById("answer1").innerHTML = questionBank[n].answer1;
+    document.getElementById("answer2").innerHTML = questionBank[n].answer2;
+    document.getElementById("answer3").innerHTML = questionBank[n].answer3;
+
     console.log(firstQuestion);
+    console.log(n);
 });
 
-console.log(questionBank[1]);
-console.log(questionBank2[1]);
-console.log(questionBankFull[0]);
-console.log(questionBankFull[0].answer1);
+console.log(questionBank[0]);
+console.log(questionBank[0].answer1);
 
 function runQuiz() {
 }
