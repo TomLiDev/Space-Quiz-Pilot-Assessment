@@ -109,6 +109,10 @@ body {
     border-radius: 50px;
 }
 
+#start-menu-items>a {
+    display: contents;
+}
+
 /** Footer syling **/
 
 #footer-container {
