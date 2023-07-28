@@ -146,7 +146,21 @@ body {
     border-radius: 50px;
 }
 
-#question-text {}
+#score-section {
+    margin-top: 40px;
+    width: 200px;
+    height: 60px;
+    background-color: aliceblue;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 150%;
+    border-radius: 30px;
+}
+
+#score {
+    padding: 10px;
+}
 
 /** Media query for screens smaller than 950px */
 
