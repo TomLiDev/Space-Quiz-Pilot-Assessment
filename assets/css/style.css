@@ -146,6 +146,8 @@ body {
     border-radius: 50px;
 }
 
+#question-text {}
+
 /** Media query for screens smaller than 950px */
 
 @media screen and (max-width: 950px) {
