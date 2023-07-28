@@ -129,6 +129,23 @@ body {
     color: aliceblue;
 }
 
+/** Styling for actual quiz itself and questions **/
+
+#questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-buttons {
+    height: 60px;
+    width: 250%;
+    margin: 10px;
+    font-size: 150%;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 50px;
+}
+
 /** Media query for screens smaller than 950px */
 
 @media screen and (max-width: 950px) {
