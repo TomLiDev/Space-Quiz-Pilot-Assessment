@@ -61,37 +61,52 @@ const questionBank = [
 /**  Overall run game function */
 
 document.addEventListener("DOMContentLoaded", function () {
-    let n = Math.floor(Math.random() * 5) + 1;
-    let firstQuestion = questionBank[n].questionText;
-    document.getElementById("question-text").innerHTML = firstQuestion;
+
+    let buttons = document.getElementsByClassName("answer-buttons");
+    for (let button of buttons) {
+        button.addEventListener("click", checkAnswer);
+    };
+
+    nextQuestion();
+
+});
+
+/** Next Question Function, called after either a correct or wrong answer is entered */
+
+function nextQuestion() {
+    console.log("next");
+    let n = Math.floor(Math.random() * 6) + 1;
+    let nextQuestion = questionBank[n].questionText;
+    document.getElementById("question-text").innerHTML = nextQuestion;
     document.getElementById("answer1").innerHTML = questionBank[n].answer1;
     document.getElementById("answer2").innerHTML = questionBank[n].answer2;
     document.getElementById("answer3").innerHTML = questionBank[n].answer3;
 
     let buttons = document.getElementsByClassName("answer-buttons");
     for (let button of buttons) {
-        button.addEventListener("click", checkAnswer);
-    }
-
-    console.log("Test");
-    console.log(questionBank[n].correctAnswer);
-    let rightAnswer = questionBank[n].correctAnswer;
-    console.log(rightAnswer);
-
-    function checkAnswer() {
-        console.log("Button pressed");
-        console.log(this.innerHTML);
-        if (this.innerHTML = rightAnswer) {
-            console.log("correct");
-            alert("You got it right");
-            addCorrectScore();
+        if (button.innerHTML === questionBank[n].correctAnswer) {
+            button.setAttribute("data-type", "correct");
         } else {
-            wrongAnswer();
+            button.setAttribute("data-type", "wrong");
         }
-        console.log("Button pressed");
-    }
+    };
 
-});
+    questionCounter();
+
+};
+
+function checkAnswer() {
+    console.log("Button pressed");
+
+    if (this.getAttribute("data-type") === "correct") {
+        console.log("correct");
+        this.style.background = "green";
+        alert("You got it right");
+        addCorrectScore();
+    } else {
+        wrongAnswer();
+    };
+};
 
 /** Function for Adding score for correct answer */
 
@@ -99,7 +114,21 @@ function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("score").innerHTML);
     document.getElementById("score").innerHTML = oldScore + 10;
     console.log(oldScore);
+
+    nextQuestion();
 }
 
-/** Wrong Anser Function */
+/** Wrong Answer Function */
 
+function wrongAnswer() {
+    alert("Nope");
+    nextQuestion();
+};
+
+/** Question Counter Function */
+
+function questionCounter {
+    for (let count = 1; count < 10; count++) {
+        console.log(count);
+    }
+}
