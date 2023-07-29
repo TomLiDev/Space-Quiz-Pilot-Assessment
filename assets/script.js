@@ -84,13 +84,22 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.innerHTML = rightAnswer) {
             console.log("correct");
             alert("You got it right");
+            addCorrectScore();
+        } else {
+            wrongAnswer();
         }
         console.log("Button pressed");
     }
 
 });
 
+/** Function for Adding score for correct answer */
 
 function addCorrectScore() {
-
+    let oldScore = parseInt(document.getElementById("score").innerHTML);
+    document.getElementById("score").innerHTML = oldScore + 10;
+    console.log(oldScore);
 }
+
+/** Wrong Anser Function */
+
