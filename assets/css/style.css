@@ -144,6 +144,27 @@ body {
     font-size: 150%;
     font-family: 'Exo 2', sans-serif;
     border-radius: 50px;
+    background-color: aliceblue;
+}
+
+.correct-answer-button {
+    height: 60px;
+    width: 250%;
+    margin: 10px;
+    font-size: 150%;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 50px;
+    background-color: green;
+}
+
+.incorrect-answer-button {
+    height: 60px;
+    width: 250%;
+    margin: 10px;
+    font-size: 150%;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 50px;
+    background-color: red;
 }
 
 #score-section {

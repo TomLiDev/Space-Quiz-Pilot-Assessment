@@ -82,7 +82,7 @@ function nextQuestion() {
     document.getElementById("answer2").innerHTML = questionBank[n].answer2;
     document.getElementById("answer3").innerHTML = questionBank[n].answer3;
 
-    let buttons = document.getElementsByClassName("answer-buttons");
+    let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         if (button.innerHTML === questionBank[n].correctAnswer) {
             button.setAttribute("data-type", "correct");
@@ -90,9 +90,6 @@ function nextQuestion() {
             button.setAttribute("data-type", "wrong");
         }
     };
-
-    questionCounter();
-
 };
 
 function checkAnswer() {
@@ -100,12 +97,12 @@ function checkAnswer() {
 
     if (this.getAttribute("data-type") === "correct") {
         console.log("correct");
-        this.style.background = "green";
-        alert("You got it right");
+        this.className = "correct-answer-button";
         addCorrectScore();
     } else {
         wrongAnswer();
     };
+
 };
 
 /** Function for Adding score for correct answer */
@@ -113,22 +110,42 @@ function checkAnswer() {
 function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("score").innerHTML);
     document.getElementById("score").innerHTML = oldScore + 10;
+    console.log("score");
     console.log(oldScore);
-
-    nextQuestion();
-}
+    setTimeout(questionStyleReset, 5000);
+};
 
 /** Wrong Answer Function */
 
 function wrongAnswer() {
-    alert("Nope");
-    nextQuestion();
+    alert("Incorrect, correct answer highlighted in green");
+    alert("Incorrect");
+    questionStyleReset();
 };
 
 /** Question Counter Function */
 
-function questionCounter {
-    for (let count = 1; count < 10; count++) {
-        console.log(count);
+function questionCounter(num1) {
+    let count = 1 + num1;
+    console.log(count);
+};
+
+/** Function to return answer buttons back to normal style */
+
+
+
+function questionStyleReset() {
+    console.log("reset");
+    let changeButtons = document.getElementsByTagName("button");
+    console.log(changeButtons);
+
+    for (let button of changeButtons) {
+        console.log(button.innerHTML);
+        if (button.className === "correct-answer-button") {
+            button.classList.remove("correct-answer-button");
+            button.classList.add("answer-buttons");
+        }
+
     }
-}
+    nextQuestion();
+};
