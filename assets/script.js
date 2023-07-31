@@ -98,7 +98,7 @@ const questionBank = [
     },
 ];
 
-/**  Overall run game function */
+/**  Overall start game function */
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -106,11 +106,12 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", checkAnswer);
     };
-
     nextQuestion();
 });
 
 /** Next Question Function, called after either a correct or wrong answer is entered */
+
+let questionArray = [];
 
 function nextQuestion() {
     console.log("next");
@@ -132,7 +133,10 @@ function nextQuestion() {
             button.setAttribute("data-type", "wrong");
         }
     };
-    questionCounter(questionNo);
+    questionArray.push(questionNo);
+    console.log(questionArray);
+
+    questionCounter(questionArray);
 };
 
 function checkAnswer() {
@@ -173,11 +177,10 @@ function wrongAnswer() {
 
 /** Question Counter Function */
 
-function questionCounter(questionNo) {
-    let countArray = [];
-    console.log(countArray);
-    countArray.push(questionNo);
-    console.log(countArray);
+function questionCounter(questionArray) {
+    if (questionArray.length === 10) {
+        window.location.href = "result";
+    }
 };
 
 /** Function to return answer buttons back to normal style */
@@ -185,10 +188,8 @@ function questionCounter(questionNo) {
 function questionStyleReset() {
     console.log("reset");
     let changeButtons = document.getElementsByTagName("button");
-    console.log(changeButtons);
 
     for (let button of changeButtons) {
-        console.log(button.innerHTML);
         if (button.className === "correct-answer-button") {
             button.classList.remove("correct-answer-button");
             button.classList.add("answer-buttons");
@@ -197,7 +198,6 @@ function questionStyleReset() {
             button.classList.remove("incorrect-answer-button");
             button.classList.add("answer-buttons");
         }
-
     }
     nextQuestion();
 };
