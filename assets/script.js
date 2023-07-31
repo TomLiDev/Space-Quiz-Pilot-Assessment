@@ -8,7 +8,7 @@ const questionBank = [
         correctAnswer: "Pluto"
     },
     {
-        questionText: "What is the third planet for the Sun?",
+        questionText: "What is the third planet from the Sun?",
         answer1: "Earth",
         answer2: "Venus",
         answer3: "Jupiter",
@@ -93,6 +93,7 @@ function nextQuestion() {
 };
 
 function checkAnswer() {
+    let buttons = document.getElementsByTagName("button");
     console.log("Button pressed");
 
     if (this.getAttribute("data-type") === "correct") {
@@ -100,6 +101,12 @@ function checkAnswer() {
         this.className = "correct-answer-button";
         addCorrectScore();
     } else {
+        console.log("wrong");
+        this.className = "incorrect-answer-button";
+        for (let button of buttons) {
+            if (button.getAttribute("data-type") === "correct")
+                button.className = "correct-answer-button";
+        }
         wrongAnswer();
     };
 
@@ -112,15 +119,13 @@ function addCorrectScore() {
     document.getElementById("score").innerHTML = oldScore + 10;
     console.log("score");
     console.log(oldScore);
-    setTimeout(questionStyleReset, 5000);
+    setTimeout(questionStyleReset, 3000);
 };
 
 /** Wrong Answer Function */
 
 function wrongAnswer() {
-    alert("Incorrect, correct answer highlighted in green");
-    alert("Incorrect");
-    questionStyleReset();
+    setTimeout(questionStyleReset, 2000);
 };
 
 /** Question Counter Function */
@@ -143,6 +148,10 @@ function questionStyleReset() {
         console.log(button.innerHTML);
         if (button.className === "correct-answer-button") {
             button.classList.remove("correct-answer-button");
+            button.classList.add("answer-buttons");
+        }
+        if (button.className === "incorrect-answer-button") {
+            button.classList.remove("incorrect-answer-button");
             button.classList.add("answer-buttons");
         }
 
