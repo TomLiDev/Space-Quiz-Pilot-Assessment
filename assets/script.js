@@ -101,43 +101,100 @@ const questionBank = [
 /**  Overall start game function */
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    let buttons = document.getElementsByClassName("answer-buttons");
-    for (let button of buttons) {
-        button.addEventListener("click", checkAnswer);
+    if (document.getElementsByTagName("body")[0].id === "quiz-main") {
+        sessionStorage.setItem("count", 0);
+        let buttons = document.getElementsByClassName("answer-buttons");
+        for (let button of buttons) {
+            button.addEventListener("click", checkAnswer);
+        };
+        shuffleQuestions(questionBank);
+    } else {
+        console.log("any other page");
+        console.log(finalScore);
+        console.log(sessionStorage.getItem("final-score"));
+        document.getElementById("final-score").innerText = (sessionStorage.getItem("final-score"));
     };
-    nextQuestion();
 });
 
 /** Next Question Function, called after either a correct or wrong answer is entered */
 
+let startCount = 0;
+let questionsMax = 10;
 let questionArray = [];
+let finalScore = 0;
 
-function nextQuestion() {
-    console.log("next");
-    let n = Math.floor(Math.random() * 9) + 1;
-    let nextQuestion = questionBank[n].questionText;
-    let questionNo = questionBank[n].questionNumber;
-    console.log(questionNo);
+function shuffleQuestions(questionBank) {
+    let currentIndex = questionBank.length, randomIndex;
 
-    document.getElementById("question-text").innerHTML = nextQuestion;
-    document.getElementById("answer1").innerHTML = questionBank[n].answer1;
-    document.getElementById("answer2").innerHTML = questionBank[n].answer2;
-    document.getElementById("answer3").innerHTML = questionBank[n].answer3;
+    while (currentIndex != 0) {
 
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [questionBank[currentIndex], questionBank[randomIndex]] = [
+            questionBank[randomIndex], questionBank[currentIndex]];
+    };
+    firstQuestion();
+    return questionBank;
+};
+
+console.log("shuffled questions", questionBank);
+
+
+/** Function to load first question */
+
+function firstQuestion() {
+    console.log("first question");
+    for (let i = 0; i < 10; i++) {
+
+        document.getElementById("question-text").innerHTML = questionBank[i].questionText;
+        document.getElementById("answer1").innerHTML = questionBank[i].answer1;
+        document.getElementById("answer2").innerHTML = questionBank[i].answer2;
+        document.getElementById("answer3").innerHTML = questionBank[i].answer3;
+
+        let currentQuestionCorrectAnswer = questionBank[i].correctAnswer;
+        console.log("Answer check", currentQuestionCorrectAnswer);
+
+        setCorrectAnswer(currentQuestionCorrectAnswer);
+    };
+};
+
+/** Function for every subsequent question after first */
+
+function nextQuestion2(currentCount) {
+    console.log("loaded question bank", questionBank);
+    console.log(currentCount);
+
+    while (currentCount < 10) {
+        console.log("selected question", questionBank[currentCount]);
+        console.log("Current Question correct answer", questionBank[currentCount].correctAnswer);
+        document.getElementById("question-text").innerHTML = questionBank[currentCount].questionText;
+        document.getElementById("answer1").innerHTML = questionBank[currentCount].answer1;
+        document.getElementById("answer2").innerHTML = questionBank[currentCount].answer2;
+        document.getElementById("answer3").innerHTML = questionBank[currentCount].answer3;
+
+        let currentQuestionCorrectAnswer = questionBank[currentCount].correctAnswer;
+        console.log("Answer check", currentQuestionCorrectAnswer);
+
+        setCorrectAnswer(currentQuestionCorrectAnswer);
+        return currentQuestionCorrectAnswer;
+    }
+};
+
+/** Function to set correct answer */
+
+function setCorrectAnswer(currentQuestionCorrectAnswer) {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
-        if (button.innerHTML === questionBank[n].correctAnswer) {
+        if (button.innerHTML === currentQuestionCorrectAnswer) {
             button.setAttribute("data-type", "correct");
         } else {
             button.setAttribute("data-type", "wrong");
-        }
+        };
     };
-    questionArray.push(questionNo);
-    console.log(questionArray);
-
-    questionCounter(questionArray);
 };
+
+/** Check Answer Function */
 
 function checkAnswer() {
     let buttons = document.getElementsByTagName("button");
@@ -156,6 +213,7 @@ function checkAnswer() {
         }
         wrongAnswer();
     };
+    setTimeout(questionCounter, 2000);
 
 };
 
@@ -163,9 +221,17 @@ function checkAnswer() {
 
 function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("score").innerHTML);
-    document.getElementById("score").innerHTML = oldScore + 10;
+    let newScore = oldScore + 10;
+    document.getElementById("score").innerHTML = newScore;
     console.log("score");
-    console.log(oldScore);
+    console.log("oldScore", oldScore);
+    console.log(newScore);
+    finalScore = newScore;
+    sessionStorage.setItem("finalScore", finalScore);
+    console.log("Final Score");
+    console.log(sessionStorage.getItem("finalScore"));
+    console.log(finalScore);
+    console.log(parseInt(sessionStorage.getItem("finalScore")));
     setTimeout(questionStyleReset, 2000);
 };
 
@@ -177,11 +243,15 @@ function wrongAnswer() {
 
 /** Question Counter Function */
 
-function questionCounter(questionArray) {
-    if (questionArray.length === 10) {
-        window.location.href = "result";
-    }
-};
+function questionCounter() {
+    let currentCount = startCount++;
+
+    console.log("count", currentCount);
+
+    nextQuestion2(currentCount);
+
+    return currentCount;
+}
 
 /** Function to return answer buttons back to normal style */
 
@@ -199,5 +269,16 @@ function questionStyleReset() {
             button.classList.add("answer-buttons");
         }
     }
-    nextQuestion();
+    nextQuestion2();
+};
+
+function endQuiz(finalScore) {
+    console.log(sessionStorage.getItem("finalScore"));
+    console.log(finalScore);
+    setTimeout(totalEnd, 5000);
+    function totalEnd() {
+        location.href = "result.html";
+        console.log(sessionStorage.getItem("finalScore"));
+        document.getElementById("final-score").innerHTML = finalScore;
+    };
 };
