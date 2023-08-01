@@ -310,3 +310,25 @@ function endQuiz(finalScore) {
         document.getElementById("final-score").innerHTML = finalScore;
     };
 };
+
+/** Leaderboard check score and add to array function */
+
+let leaderBoardScores = [
+    {
+        userName: "John",
+        userScore: 30
+
+    },
+    {
+        userName: "Sarah",
+        userScore: 70
+
+    },
+    {
+        userName: "Ahmed",
+        userScore: 50
+
+    },
+];
+
+
