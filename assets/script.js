@@ -108,10 +108,16 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         shuffleQuestions(questionBank);
     } else {
+        var finalScoreRetrieved = localStorage.getItem("final-score");
+        let anotherVar = sessionStorage.getItem("Another");
+        let scoreToPass = sessionStorage.getItem("scoreToPass");
+        console.log(anotherVar);
+        console.log(scoreToPass);
+        console.log(finalScoreRetrieved);
         console.log("any other page");
         console.log(localStorage.getItem("final-score"), "worked?");
         console.log(finalScore);
-        document.getElementById("final-score").innerText = (localStorage.getItem("final-score"));
+        document.getElementById("final-score").innerText = scoreToPass;
     };
 });
 
@@ -120,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let startCount = 0;
 let questionsMax = 10;
 let questionArray = [];
+let finalScore = 0;
 
 /** Function to shuffle questions array at start of quiz */
 
@@ -137,9 +144,6 @@ function shuffleQuestions(questionBank) {
     firstQuestion();
     return questionBank;
 };
-
-console.log("shuffled questions", questionBank);
-
 
 /** Function to load first question */
 
@@ -231,10 +235,9 @@ function addCorrectScore() {
     console.log("oldScore", oldScore);
     console.log(newScore);
     finalScore = newScore;
-    localStorage.setItem("finalScore", finalScore);
+    localStorage.setItem("finalScore", "100");
     console.log("Final Score", finalScore);
     console.log(localStorage.getItem("finalScore"));
-    console.log(finalScore);
 
     setTimeout(questionStyleReset, 2000);
 
@@ -262,7 +265,6 @@ function questionStyleReset() {
             button.classList.remove("incorrect-answer-button");
             button.classList.add("answer-buttons");
         }
-
         button.disabled = false;
     }
     questionCounter();
@@ -282,6 +284,10 @@ function questionCounter() {
     } else {
         endQuiz(finalScore);
     }
+    if (localStorage.getItem("storageScore") !== null) {
+        console.log((localStorage.getItem("storageScore")));
+    }
+
 }
 
 /** Function to End Quiz */
@@ -289,9 +295,17 @@ function questionCounter() {
 function endQuiz(finalScore) {
     console.log(localStorage.getItem("finalScore"), "End quiz score from session storage");
     console.log("End quiz finalScore", finalScore);
+    localStorage.setItem("storageScore", finalScore);
+    console.log("storage score", (localStorage.getItem("storageScore")));
     setTimeout(totalEnd, 5000);
     function totalEnd() {
-        location.href = "result.html";
+        let anotherVar = "Another variable";
+        sessionStorage.setItem("Another", anotherVar);
+        let scoreToPass = finalScore;
+        sessionStorage.setItem("scoreToPass", scoreToPass);
+        console.log(localStorage.getItem("finalScore"), "total End quiz score from session storage");
+        console.log("total End quiz finalScore", finalScore);
+        location.assign("result.html");
         console.log(window.localStorage.getItem("finalScore"));
         document.getElementById("final-score").innerHTML = finalScore;
     };
