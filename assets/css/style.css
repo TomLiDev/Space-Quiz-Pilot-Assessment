@@ -200,6 +200,16 @@ body {
     padding: 10px;
 }
 
+#check-leaderboard-button {
+    height: 60px;
+    width: 80%;
+    margin: 30px;
+    font-size: 150%;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 50px;
+    background-color: aliceblue;
+}
+
 
 /** Media query for screens smaller than 950px */
 
