@@ -121,6 +121,8 @@ let startCount = 0;
 let questionsMax = 10;
 let questionArray = [];
 
+/** Function to shuffle questions array at start of quiz */
+
 function shuffleQuestions(questionBank) {
     let currentIndex = questionBank.length, randomIndex;
 
@@ -211,6 +213,10 @@ function checkAnswer() {
         }
         wrongAnswer();
     };
+
+    for (let button of buttons) {
+        button.disabled = true;
+    }
     setTimeout(questionCounter, 2000);
 
 };
@@ -256,6 +262,8 @@ function questionStyleReset() {
             button.classList.remove("incorrect-answer-button");
             button.classList.add("answer-buttons");
         }
+
+        button.disabled = false;
     }
     questionCounter();
 };
@@ -275,6 +283,8 @@ function questionCounter() {
         endQuiz(finalScore);
     }
 }
+
+/** Function to End Quiz */
 
 function endQuiz(finalScore) {
     console.log(localStorage.getItem("finalScore"), "End quiz score from session storage");
