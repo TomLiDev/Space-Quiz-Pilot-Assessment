@@ -331,4 +331,18 @@ let leaderBoardScores = [
     },
 ];
 
+leaderboard.html.onload = createExistingLeaderboardArray();
 
+function createExistingLeaderboardArray() {
+    let oldLeaderBoardScores = [];
+    document.getElementsByClassName("table-name-cell");
+
+    for (let i = 0, row; row = document.getElementById("leaderboard-table").rows[i]; i++) {
+        for (let cell of row.cells) {
+            let cellValue = cell.innerHTML;
+            console.log(cellValue);
+            oldLeaderBoardScores.push(cellValue);
+            console.log(oldLeaderBoardScores);
+        }
+    }
+}

@@ -129,7 +129,29 @@ body {
     color: aliceblue;
 }
 
-/** Styling for actual quiz itself and questions **/
+/** Styling for enter name page **/
+
+#start-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#enter-menu-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.7);
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/** Styling for main quiz itself and questions **/
 
 #questions {
     display: flex;
@@ -231,7 +253,22 @@ body {
     margin-top: 50px;
 }
 
-#leaderboard-table {}
+#leaderboard-table>tr {
+    width: 30px;
+    height: 30px;
+}
+
+#leaderboard-table>th {
+    width: 30px;
+    height: 30px;
+}
+
+.table-rank-cell {}
+
+.table-name-cell {}
+
+.table-score-cell {}
+
 
 /** Media query for screens smaller than 950px */
 
