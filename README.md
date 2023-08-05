@@ -62,13 +62,11 @@ Please use the link below to view the live, deployed site:
 
 ## User Experience
 
-Oda Nubanaga, Japans First Great Unifier, is a website which provides interesting, easy to navigate content for a range of users with various interests and content requirements.
-
 Space Quiz is a website which provides a fun and engaging quiz for users to test their knowledge on space and the solar system, whilst learning more about both.
 
 Key Features:
 
-- Start Quiz! The option to begin a new quiz.
+- Begin! The option to begin a new quiz.
 
 - How to play - Instructions for how to go through the quiz.
 
@@ -78,7 +76,7 @@ Key Features:
 
 #### First Time Visitors
 
-As a first time visitor I want to understand how to play the quiz and have the ability to start the quiz quickly and easily. I want to know which questions I get right and wrong, if wrong I want to know what the correct answer was. Once completed, I want to know my overall score and how that compares to others.
+As a first time visitor I want to understand how to play the quiz and have the ability to start the quiz quickly and easily. I want to know which questions I get right and wrong, if wrong, I want to know what the correct answer was. Once completed, I want to know my overall score and how that compares to others.
 
 I want a prompt to come back and play again in the future.
 
@@ -90,23 +88,23 @@ As a return visitor I have to be able to easily check my past score against othe
 
 ### Colour Scheme
 
-I knew the colour scheme would be driven largely by the colours of the background images used on the home page (see below). This would mean using black, purple/dark blue. I will then use a pale blueish offwhite for sections that I wanted to highlight and bring attention to, such as menu containers, to provide contrast against the background and provide contrast for a dark text colour.
+I knew the colour scheme would be driven largely by the colours of the background images used on the home page. This would mean using black and potentially some dark purple/blue. I will then use a pale blueish offwhite for sections that I wanted to highlight and bring attention to, such as menu containers, to provide contrast against the background and provide contrast for a dark text colour. The colour pallette is however kept very simple and driven largely by the space background, which is deliberate.
 
-![Image of Color Palette](documentation/color-palette.png)
-
-Against this, individual images/animations/graphics of planets, comets etc can be made to stand out nicely.
+![Image of Color Palette](documentation/spacequiz-colour-pallette.png)
 
 ### Typography
 
-I used the font from google fonts for the site. I experimented with other font types to see which gave a futuristic sci fi feel, without making the text too outlandish or difficult to read. I feel that FONT meets this requirement nicely, and when capitalised works well in the nav bar also.
+I used the font Exo 2 from google fonts for the site. I experimented with other font types to see which gave a futuristic sci fi feel, without making the text too outlandish or difficult to read. I feel that Exo 2 meets this requirement nicely, and when capitalised works well in the nav bar also.
 
-[Image of Garamond, Font Used on Website](documentation/garamond.PNG)
+[Image of Garamond, Font Used on Website](documentation/Exo2-font.PNG)
 
 San's serif is used as the back-up font if FONT cannot be loaded for any reason.
 
 ### Imagery
 
 I want to keep the imagery quite simple as I don't want too much on-screen to distract from the quiz questions. The main image used will be the space background image, this provides a nice back drop that also has a bit of variety in the colours.
+
+[The background image](documentation/spacequiz-background1.webp)
 
 I may also use images of planets/stars etc in the leaderboard and other pages that are not quiz question pages to provide variety.
 
@@ -160,6 +158,14 @@ On the homepage the user is presented with the options to Start a new quiz, view
 
 ![An image of the homepage on different devices](documentation/readme-intro.png)
 
+### Instructions Page
+
+The instructions page will present the user with a simple, short list of instuctions on how to play the game. As the game is a quiz and the options to select an answer in relation to the question being displayed are fairly obvious and intuitive the instructions will be brief.
+
+### Username Page
+
+If the user selects to begin a quiz they will be presented with a page which asks them to enter a user name. This value will be passed through the quiz for use in the leaderboard later is the player scores highly enough.
+
 ### Quiz Start
 
 The Quiz Start page wil be visually similar to the home page. The key difference being the text in the central menu will be a question and the buttons below this will be options to select different answers.
@@ -178,7 +184,7 @@ IMAGE
 
 ### Result Page
 
-The result page will be shown to the user at the end of the quiz. It will show the final calculated score from the quiz potentially with a simple breakdown showing the number of questions answered correctly, questions answered incorrectly.
+The result page will be shown to the user at the end of the quiz. It will show the final calculated score from the quiz with some text stating well done!
 
 The player will then have a button to take them to the leaderboard and show them if/where their score has ranked.
 
@@ -192,7 +198,7 @@ The player will then have a button to take them to the leaderboard and show them
 
 ### Leaderboard
 
-The leaderboard page will be shown after the user has viewed their final result. This will consist of a table showing the ranking, name and score of other players results.
+The leaderboard page will be shown after the user has viewed their final result, or if the player chooses to navigate to the leaderboard directly from the home page. This will consist of a table showing the ranking, name and score of other players results.
 
 Time permitting, I would like to incorporate some code so that if the player has scored highly enough to enter the leaderboard, their name/score/ranking row is highlighted so it is obvious.
 
@@ -236,9 +242,11 @@ HTML, CSS and Javascript are used.
 
 - Balsamiq - wireframes
 
+- Coolors - Colour Palette
+
 - Google fonts - For imported fonts
 
-- Font Awesome - For social media icons
+- Font Awesome - For header and footer icons
 
 - Google Developer Tools - For troubleshooting/bug resolution and testing responsiveness
 
