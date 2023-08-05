@@ -100,12 +100,12 @@ const questionBank = [
 
 /** Enter Name Page */
 
-function userName() {
-    console.log("tst");
-    let enteredUserName = document.getElementById("name-input").innerText;
-    console.log("username", enteredUserName);
-    let userName = enteredUserName;
-    sessionStorage.setItem("userName", userName);
+function getUserName() {
+    alert("get user name start");
+    alert(document.getElementsByName("name-input")[0].value);
+    let userNameToPass = document.getElementsByName("name-input")[0].value;
+    sessionStorage.setItem("userNameToPass", userNameToPass);
+    alert(userNameToPass);
 }
 
 /**  Overall start game function */
@@ -113,7 +113,7 @@ function userName() {
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementsByTagName("body")[0].id === "username") {
         let button = document.getElementById("start-quiz-actual-button");
-        button.addEventListener("click", userName);
+        button.addEventListener("click", getUserName);
     };
 
     if (document.getElementsByTagName("body")[0].id === "quiz-main") {
@@ -121,6 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let button of buttons) {
             button.addEventListener("click", checkAnswer);
         };
+        let userNameToPass = sessionStorage.getItem("userNameToPass");
+        alert(userNameToPass);
+        console.log("Just before shuffle");
         shuffleQuestions(questionBank);
     } else {
         var finalScoreRetrieved = localStorage.getItem("final-score");
@@ -129,12 +132,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let userName = sessionStorage.getItem("userName");
         console.log(userName);
         console.log(anotherVar);
-        console.log(scoreToPass);
+        console.log("scoreToPass", scoreToPass);
         console.log(finalScoreRetrieved);
         console.log("any other page");
         console.log(localStorage.getItem("final-score"), "worked?");
         console.log(finalScore);
-        document.getElementById("final-score").innerText = scoreToPass;
     };
 });
 
