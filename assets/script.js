@@ -352,16 +352,19 @@ function resultDisplay() {
 
 let leaderBoardScores = [
     {
+        rank: 1,
         userName: "John",
         userScore: 30
 
     },
     {
+        rank: 2,
         userName: "Sarah",
         userScore: 70
 
     },
     {
+        rank: 3,
         userName: "Ahmed",
         userScore: 50
 
@@ -374,6 +377,7 @@ function createExistingLeaderboardArray() {
     alert(userNameToPass);
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     alert(scoreToPass);
+
     let oldLeaderBoardScores = [];
     document.getElementsByClassName("table-name-cell");
 
@@ -385,4 +389,38 @@ function createExistingLeaderboardArray() {
             console.log(oldLeaderBoardScores);
         }
     }
+    sortLeaderBoard();
 }
+
+let scoreCheckArray = [];
+let minScore = 0;
+
+function sortLeaderBoard() {
+    let scoreCheckArray = [];
+    console.log("array length", leaderBoardScores.length);
+    for (let i = 0; i < 3; i++) {
+        if (i < 3) {
+            let scoreToInput = leaderBoardScores[i].userScore;
+            console.log("score", scoreToInput);
+            scoreCheckArray.push(scoreToInput);
+            console.log(scoreCheckArray);
+            let minScore = Math.min(...scoreCheckArray);
+
+            console.log("lowest score", minScore);
+            sessionStorage.setItem("minScore", minScore);
+        }
+    }
+    checkIfScoreLeaderboard();
+};
+
+function checkIfScoreLeaderboard() {
+    let scoreToPass = sessionStorage.getItem("scoreToPass");
+    let minScore = sessionStorage.getItem("minScore");
+    console.log(scoreToPass);
+    console.log(minScore);
+    alert("Score check", minScore, scoreToPass);
+    console.log("min score check");
+    if (scoreToPass < minScore) {
+        alert("Not this time pilot,try again");
+    };
+};
