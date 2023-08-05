@@ -98,9 +98,24 @@ const questionBank = [
     },
 ];
 
+/** Enter Name Page */
+
+function userName() {
+    console.log("tst");
+    let enteredUserName = document.getElementById("name-input").innerText;
+    console.log("username", enteredUserName);
+    let userName = enteredUserName;
+    sessionStorage.setItem("userName", userName);
+}
+
 /**  Overall start game function */
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (document.getElementsByTagName("body")[0].id === "username") {
+        let button = document.getElementById("start-quiz-actual-button");
+        button.addEventListener("click", userName);
+    };
+
     if (document.getElementsByTagName("body")[0].id === "quiz-main") {
         let buttons = document.getElementsByClassName("answer-buttons");
         for (let button of buttons) {
@@ -111,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var finalScoreRetrieved = localStorage.getItem("final-score");
         let anotherVar = sessionStorage.getItem("Another");
         let scoreToPass = sessionStorage.getItem("scoreToPass");
+        let userName = sessionStorage.getItem("userName");
+        console.log(userName);
         console.log(anotherVar);
         console.log(scoreToPass);
         console.log(finalScoreRetrieved);
@@ -332,6 +349,11 @@ let leaderBoardScores = [
 ];
 
 leaderboard.html.onload = createExistingLeaderboardArray();
+
+if (document.getElementsByTagName("body") === "leaderboard.html") {
+    let userName = sessionStorage.getItem("userName");
+    console.log(userName);
+}
 
 function createExistingLeaderboardArray() {
     let oldLeaderBoardScores = [];

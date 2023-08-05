@@ -160,6 +160,13 @@ body {
 #name-input {
     width: 400px;
     height: 50px;
+    text-align: center;
+    font-size: 200%;
+}
+
+#start-quiz-button {
+    margin-right: 220px;
+    padding-top: 30px;
 }
 
 /** Styling for main quiz itself and questions **/
@@ -264,22 +271,23 @@ body {
     margin-top: 50px;
 }
 
-#leaderboard-table>tr {
-    width: 30px;
-    height: 30px;
+#leaderboard-table-container>h2 {
+    font-size: 300%;
+    text-transform: uppercase;
+    padding-bottom: 30px;
 }
 
-#leaderboard-table>th {
-    width: 30px;
-    height: 30px;
+#leaderboard-table {
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    font-size: 150%;
+    border: outset;
+    border-color: black;
+    border-radius: 25px;
 }
 
-.table-rank-cell {}
-
-.table-name-cell {}
-
-.table-score-cell {}
-
+#leaderboard-table>td {}
 
 /** Media query for screens smaller than 950px */
 
