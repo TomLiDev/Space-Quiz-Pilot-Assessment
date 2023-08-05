@@ -422,5 +422,5 @@ function checkIfScoreLeaderboard() {
     console.log("min score check");
     if (scoreToPass < minScore) {
         alert("Not this time pilot,try again");
-    };
+    }
 };
