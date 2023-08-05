@@ -102,10 +102,11 @@ const questionBank = [
 
 function getUserName() {
     alert("get user name start");
-    alert(document.getElementsByName("name-input")[0].value);
     let userNameToPass = document.getElementsByName("name-input")[0].value;
     sessionStorage.setItem("userNameToPass", userNameToPass);
     alert(userNameToPass);
+
+    return userNameToPass;
 }
 
 /**  Overall start game function */
@@ -115,6 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let button = document.getElementById("start-quiz-actual-button");
         button.addEventListener("click", getUserName);
     };
+    if (document.getElementsByTagName("body")[0].id === "result") {
+        setTimeout(resultDisplay, 1000);
+    };
+    if (document.getElementsByTagName("body")[0].id === "leaderboard-page") {
+        setTimeout(createExistingLeaderboardArray, 1000);
+    }
+
 
     if (document.getElementsByTagName("body")[0].id === "quiz-main") {
         let buttons = document.getElementsByClassName("answer-buttons");
@@ -129,14 +137,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var finalScoreRetrieved = localStorage.getItem("final-score");
         let anotherVar = sessionStorage.getItem("Another");
         let scoreToPass = sessionStorage.getItem("scoreToPass");
-        let userName = sessionStorage.getItem("userName");
-        console.log(userName);
+        let userNameToPass = sessionStorage.getItem("userNameToPass");
+        console.log("usernametopass", userNameToPass);
         console.log(anotherVar);
         console.log("scoreToPass", scoreToPass);
         console.log(finalScoreRetrieved);
         console.log("any other page");
-        console.log(localStorage.getItem("final-score"), "worked?");
-        console.log(finalScore);
     };
 });
 
@@ -327,8 +333,20 @@ function endQuiz(finalScore) {
         location.assign("result.html");
         console.log(window.localStorage.getItem("finalScore"));
         document.getElementById("final-score").innerHTML = finalScore;
+        document.getElementById("final-score").innerHTML = sessionStorage.getItem("scoreToPass");
     };
 };
+
+/** Results page function */
+
+function resultDisplay() {
+    alert("This is the results page");
+    let userNameToPass = sessionStorage.getItem("userNameToPass");
+    alert(userNameToPass);
+    let scoreToPass = sessionStorage.getItem("scoreToPass");
+    alert(scoreToPass);
+    document.getElementById("final-score").innerHTML = scoreToPass;
+}
 
 /** Leaderboard check score and add to array function */
 
@@ -350,14 +368,12 @@ let leaderBoardScores = [
     },
 ];
 
-leaderboard.html.onload = createExistingLeaderboardArray();
-
-if (document.getElementsByTagName("body") === "leaderboard.html") {
-    let userName = sessionStorage.getItem("userName");
-    console.log(userName);
-}
-
 function createExistingLeaderboardArray() {
+    alert("Leaderboard start");
+    let userNameToPass = sessionStorage.getItem("userNameToPass");
+    alert(userNameToPass);
+    let scoreToPass = sessionStorage.getItem("scoreToPass");
+    alert(scoreToPass);
     let oldLeaderBoardScores = [];
     document.getElementsByClassName("table-name-cell");
 
