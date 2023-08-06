@@ -298,7 +298,7 @@ function questionStyleReset() {
 /** Question Counter Function */
 
 function questionCounter() {
-    if (startCount < 4) {
+    if (startCount < 7) {
         let currentCount = startCount++;
 
         console.log("count", currentCount);
@@ -450,24 +450,19 @@ let newEntry = [];
 let newLeaderboard = [];
 
 function test() {
+    console.log("test start");
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     let userNameToPass = sessionStorage.getItem("userNameToPass");
-    let rows = document.getElementById("leaderboard-table").rows;
-    console.log("rows", rows);
-    for (let i = 0; i < 5; i++) {
-        console.log(interimLeaderboard[i].userScore);
-        console.log(interimLeaderboard[i].userName);
-        if (scoreToPass > interimLeaderboard[i].userScore) {
-            console.log("greater than", interimLeaderboard[i].userScore);
-            interimLeaderboard.pop();
-            console.log("popped leaderboard", interimLeaderboard);
-            newEntry.userName = userNameToPass;
-            newEntry.userScore = scoreToPass;
-            console.log("new entry", newEntry);
-            interimLeaderboard.push(newEntry);
-            console.log("updated leaderboard", interimLeaderboard);
-        }
-    }
+    interimLeaderboard.pop();
+    console.log("popped leaderboard", interimLeaderboard);
+    newEntry.userName = userNameToPass;
+    newEntry.userScore = scoreToPass;
+    console.log("new entry", newEntry);
+    interimLeaderboard.push(newEntry);
+    console.log("updated leaderboard", interimLeaderboard);
+    interimLeaderboard.sort((a, b) => (a.userScore < b.userScore) ? 1 : -1);
+    console.log("sorted?", interimLeaderboard);
+
     updateLeaderboard();
 }
 
