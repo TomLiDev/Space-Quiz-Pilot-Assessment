@@ -121,7 +121,7 @@ body {
     justify-content: center;
     font-size: 300%;
     height: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #footer-container>a {
@@ -267,6 +267,37 @@ body {
 
 /** Styling for results page */
 
+#results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.7);
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#results-container>h2 {
+    font-size: 300%;
+    padding-bottom: 20px;
+}
+
+#results-container>p {
+    font-size: 200%;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
 #final-score-section {
     display: flex;
     font-size: 200%;
@@ -292,6 +323,10 @@ body {
     background-color: aliceblue;
 }
 
+#leaderboard-from-result {
+    display: contents;
+}
+
 /** Styling for Leaderboard */
 
 #leaderboard-main {
@@ -304,13 +339,13 @@ body {
 #leaderboard-table-container {
     background-color: rgba(240, 248, 255, 0.7);
     width: 80%;
-    height: 600px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 80px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #leaderboard-table-container>h2 {
@@ -329,7 +364,20 @@ body {
     border-radius: 25px;
 }
 
-#leaderboard-table>td {}
+#leaderboard-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 300%;
+    height: auto;
+}
+
+#leaderboard-footer-container>a {
+    padding-left: 60px;
+    color: aliceblue;
+    padding-right: 60px;
+    padding-top: 30px;
+}
 
 /** Media query for screens smaller than 950px */
 

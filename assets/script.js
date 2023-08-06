@@ -101,12 +101,8 @@ const questionBank = [
 /** Enter Name Page */
 
 function getUserName() {
-    alert("get user name start");
     let userNameToPass = document.getElementsByName("name-input")[0].value;
     sessionStorage.setItem("userNameToPass", userNameToPass);
-    alert(userNameToPass);
-
-    return userNameToPass;
 }
 
 /**  Overall start game function */
@@ -117,32 +113,22 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", getUserName);
     };
     if (document.getElementsByTagName("body")[0].id === "result") {
-        setTimeout(resultDisplay, 1000);
+        setTimeout(resultDisplay, 100);
     };
     if (document.getElementsByTagName("body")[0].id === "leaderboard-page") {
-        setTimeout(createLeaderboardArray, 1000);
+        setTimeout(createLeaderboardArray, 100);
     }
-
-
     if (document.getElementsByTagName("body")[0].id === "quiz-main") {
         let buttons = document.getElementsByClassName("answer-buttons");
         for (let button of buttons) {
             button.addEventListener("click", checkAnswer);
         };
-        let userNameToPass = sessionStorage.getItem("userNameToPass");
-        alert(userNameToPass);
-        console.log("Just before shuffle");
         shuffleQuestions(questionBank);
     } else {
-        var finalScoreRetrieved = localStorage.getItem("final-score");
-        let anotherVar = sessionStorage.getItem("Another");
         let scoreToPass = sessionStorage.getItem("scoreToPass");
         let userNameToPass = sessionStorage.getItem("userNameToPass");
         console.log("usernametopass", userNameToPass);
-        console.log(anotherVar);
         console.log("scoreToPass", scoreToPass);
-        console.log(finalScoreRetrieved);
-        console.log("any other page");
     };
 });
 
@@ -150,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let startCount = 0;
 let questionsMax = 10;
-let questionArray = [];
 let finalScore = 0;
 
 /** Function to shuffle questions array at start of quiz */
@@ -173,10 +158,7 @@ function shuffleQuestions(questionBank) {
 /** Function to load first question */
 
 function firstQuestion() {
-    console.log("first question");
-
     let i = 0;
-
     document.getElementById("question-text").innerHTML = questionBank[i].questionText;
     document.getElementById("answer1").innerHTML = questionBank[i].answer1;
     document.getElementById("answer2").innerHTML = questionBank[i].answer2;
@@ -190,13 +172,8 @@ function firstQuestion() {
 
 /** Function for every subsequent question after first */
 
-function nextQuestion2(currentCount) {
-    console.log("loaded question bank", questionBank);
-    console.log(currentCount);
-
-    while (currentCount < 10) {
-        console.log("selected question", questionBank[currentCount]);
-        console.log("Current Question correct answer", questionBank[currentCount].correctAnswer);
+function nextQuestion(currentCount) {
+    while (currentCount < 4) {
         document.getElementById("question-text").innerHTML = questionBank[currentCount].questionText;
         document.getElementById("answer1").innerHTML = questionBank[currentCount].answer1;
         document.getElementById("answer2").innerHTML = questionBank[currentCount].answer2;
@@ -298,78 +275,44 @@ function questionStyleReset() {
 /** Question Counter Function */
 
 function questionCounter() {
-    if (startCount < 7) {
+    if (startCount < 4) {
         let currentCount = startCount++;
 
         console.log("count", currentCount);
 
-        nextQuestion2(currentCount);
+        nextQuestion(currentCount);
 
         return currentCount;
     } else {
         endQuiz(finalScore);
     }
-    if (localStorage.getItem("storageScore") !== null) {
-        console.log((localStorage.getItem("storageScore")));
-    }
-
 }
 
 /** Function to End Quiz */
 
 function endQuiz(finalScore) {
-    console.log(localStorage.getItem("finalScore"), "End quiz score from session storage");
-    console.log("End quiz finalScore", finalScore);
-    localStorage.setItem("storageScore", finalScore);
-    console.log("storage score", (localStorage.getItem("storageScore")));
-    setTimeout(totalEnd, 5000);
-    function totalEnd() {
-        let anotherVar = "Another variable";
-        sessionStorage.setItem("Another", anotherVar);
-        let scoreToPass = finalScore;
-        sessionStorage.setItem("scoreToPass", scoreToPass);
-        console.log(localStorage.getItem("finalScore"), "total End quiz score from session storage");
-        console.log("total End quiz finalScore", finalScore);
-        location.assign("result.html");
-        console.log(window.localStorage.getItem("finalScore"));
-        document.getElementById("final-score").innerHTML = finalScore;
-        document.getElementById("final-score").innerHTML = sessionStorage.getItem("scoreToPass");
-    };
+    let scoreToPass = finalScore;
+    sessionStorage.setItem("scoreToPass", scoreToPass);
+    console.log("final score", scoreToPass, sessionStorage.getItem("scoreToPass"));
+    location.assign("result.html");
+    document.getElementById("final-score").innerHTML = finalScore;
+    document.getElementById("final-score").innerHTML = sessionStorage.getItem("scoreToPass");
 };
 
 /** Results page function */
 
 function resultDisplay() {
-    alert("This is the results page");
     let userNameToPass = sessionStorage.getItem("userNameToPass");
-    alert(userNameToPass);
+    document.getElementById("player-name-result").innerHTML = userNameToPass;
     let scoreToPass = sessionStorage.getItem("scoreToPass");
-    alert(scoreToPass);
     document.getElementById("final-score").innerHTML = scoreToPass;
 }
 
-/** Leaderboard check score and add to array function */
-
-let leaderBoardScores = [
-    {
-        rank: 1,
-        userName: "John",
-        userScore: 30
-
-    },
-    {
-        rank: 2,
-        userName: "Sarah",
-        userScore: 70
-
-    },
-    {
-        rank: 3,
-        userName: "Ahmed",
-        userScore: 50
-
-    },
-];
+/** Leaderboard functions, 
+ * creating an array of objects from current leaderboard, 
+ * checking user score against existing score, 
+ * adding user score to array if high enough, 
+ * updating leaderboard with new values */
 
 let interimLeaderboard = [];
 
