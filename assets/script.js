@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(resultDisplay, 1000);
     };
     if (document.getElementsByTagName("body")[0].id === "leaderboard-page") {
-        setTimeout(createExistingLeaderboardArray, 1000);
+        setTimeout(createLeaderboardArray, 1000);
     }
 
 
@@ -371,36 +371,39 @@ let leaderBoardScores = [
     },
 ];
 
-function createExistingLeaderboardArray() {
-    alert("Leaderboard start");
-    let userNameToPass = sessionStorage.getItem("userNameToPass");
-    alert(userNameToPass);
-    let scoreToPass = sessionStorage.getItem("scoreToPass");
-    alert(scoreToPass);
+let interimLeaderboard = [];
 
-    let oldLeaderBoardScores = [];
-    document.getElementsByClassName("table-name-cell");
-
-    for (let i = 0, row; row = document.getElementById("leaderboard-table").rows[i]; i++) {
-        for (let cell of row.cells) {
-            let cellValue = cell.innerHTML;
-            console.log(cellValue);
-            oldLeaderBoardScores.push(cellValue);
-            console.log(oldLeaderBoardScores);
-        }
+function createLeaderboardArray() {
+    let rankCells = document.getElementsByClassName("table-rank-cell");
+    let nameCells = document.getElementsByClassName("table-name-cell");
+    let scoreCells = document.getElementsByClassName("table-score-cell");
+    console.log("cells", rankCells);
+    console.log("names", nameCells);
+    console.log("scores", scoreCells);
+    console.log("first rank", rankCells[0].innerHTML);
+    for (let i = 0; i < 5; i++) {
+        let individual = {};
+        console.log(i);
+        console.log(rankCells[i].innerHTML);
+        console.log(nameCells[i].innerHTML);
+        console.log(scoreCells[i].innerHTML);
+        individual.userName = nameCells[i].innerHTML;
+        individual.userScore = scoreCells[i].innerHTML;
+        console.log("individual", individual);
+        interimLeaderboard.push(individual);
+        console.log("leaderboard", interimLeaderboard);
     }
-    sortLeaderBoard();
+    findLowestScore();
 }
 
 let scoreCheckArray = [];
 let minScore = 0;
 
-function sortLeaderBoard() {
-    let scoreCheckArray = [];
-    console.log("array length", leaderBoardScores.length);
-    for (let i = 0; i < 3; i++) {
-        if (i < 3) {
-            let scoreToInput = leaderBoardScores[i].userScore;
+function findLowestScore() {
+    console.log("array length", interimLeaderboard.length);
+    for (let i = 0; i < 5; i++) {
+        if (i < 5) {
+            let scoreToInput = interimLeaderboard[i].userScore;
             console.log("score", scoreToInput);
             scoreCheckArray.push(scoreToInput);
             console.log(scoreCheckArray);
@@ -414,13 +417,65 @@ function sortLeaderBoard() {
 };
 
 function checkIfScoreLeaderboard() {
+    console.log("Start of score check");
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     let minScore = sessionStorage.getItem("minScore");
     console.log(scoreToPass);
     console.log(minScore);
     alert("Score check", minScore, scoreToPass);
     console.log("min score check");
-    if (scoreToPass < minScore) {
+    if (scoreToPass <= minScore) {
         alert("Not this time pilot,try again");
+    } else {
+        alert("Well done!");
+        createNewLeaderboard();
     }
 };
+
+function createNewLeaderboard() {
+    console.log(scoreCheckArray);
+    console.log("Array", scoreCheckArray);
+    let scoreToPass = sessionStorage.getItem("scoreToPass");
+    console.log("Score to pass from storage", scoreToPass);
+    for (let i = 0; i < 5; i++) {
+        console.log("This score", scoreCheckArray[i]);
+        if (scoreToPass > scoreCheckArray[i]) {
+            console.log("Score higher", scoreCheckArray[i]);
+        }
+    }
+    test();
+}
+
+let newEntry = [];
+let newLeaderboard = [];
+
+function test() {
+    let scoreToPass = sessionStorage.getItem("scoreToPass");
+    let userNameToPass = sessionStorage.getItem("userNameToPass");
+    let rows = document.getElementById("leaderboard-table").rows;
+    console.log("rows", rows);
+    for (let i = 0; i < 5; i++) {
+        console.log(interimLeaderboard[i].userScore);
+        console.log(interimLeaderboard[i].userName);
+        if (scoreToPass > interimLeaderboard[i].userScore) {
+            console.log("greater than", interimLeaderboard[i].userScore);
+            interimLeaderboard.pop();
+            console.log("popped leaderboard", interimLeaderboard);
+            newEntry.userName = userNameToPass;
+            newEntry.userScore = scoreToPass;
+            console.log("new entry", newEntry);
+            interimLeaderboard.push(newEntry);
+            console.log("updated leaderboard", interimLeaderboard);
+        }
+    }
+    updateLeaderboard();
+}
+
+function updateLeaderboard() {
+    let nameCells = document.getElementsByClassName("table-name-cell");
+    let scoreCells = document.getElementsByClassName("table-score-cell");
+    for (let i = 1; i < 5; i++) {
+        nameCells[i].innerHTML = interimLeaderboard[i].userName;
+        scoreCells[i].innerHTML = interimLeaderboard[i].userScore;
+    }
+}
