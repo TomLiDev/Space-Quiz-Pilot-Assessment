@@ -334,7 +334,6 @@ body {
 /** Styling for Leaderboard */
 
 #leaderboard-main {
-    width: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -359,13 +358,14 @@ body {
 }
 
 #leaderboard-table {
-    width: 800px;
+    width: 600px;
     height: 400px;
     text-align: center;
     font-size: 150%;
     border: outset;
     border-color: black;
     border-radius: 25px;
+    margin-bottom: 20px;
 }
 
 #leaderboard-footer-container {
@@ -453,6 +453,45 @@ body {
         padding-bottom: 20px;
         text-align: center;
     }
+
+    #leaderboard-table {
+        width: 400px;
+    }
+
+    #leaderboard-footer-container>a {
+        padding: 50px;
+    }
+
+    #leaderboard-footer-container {
+        margin-top: 50px;
+    }
+}
+
+/** Media query for screens smaller than 700px, this only really needed for the leaderboard table */
+
+@media screen and (max-width: 700px) {
+    #leaderboard-table {
+        width: 350px;
+        height: 350px;
+        font-size: 130%;
+    }
+
+    #leaderboard-table-container>h2 {
+        font-size: 250%;
+        padding-bottom: 20px;
+    }
+
+    #leaderboard-table-container {
+        height: 600px;
+    }
+
+    #footer-container>a {
+        padding: 30px;
+    }
+
+    #footer-container {
+        margin-top: 30px;
+    }
 }
 
 /** Media query for screens smaller than 500px */
@@ -514,5 +553,20 @@ body {
 
     #check-leaderboard-button {
         font-size: 120%;
+    }
+
+    #leaderboard-table-container {
+        height: 550px;
+        border-radius: 40px;
+    }
+
+    #leaderboard-table {
+        width: 250px;
+        height: 350px;
+        font-size: 130%;
+    }
+
+    #leaderboard-table-container>h2 {
+        font-size: 200%;
     }
 }
