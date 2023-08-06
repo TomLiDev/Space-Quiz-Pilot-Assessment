@@ -50,11 +50,11 @@ const questionBank = [
     },
     {
         questionNumber: 7,
-        questionText: "What distance is one astronomical unit (AU) equal to?",
-        answer1: "The distance between the Earth and the Moon",
-        answer2: "The distance between the Earth and the Sun",
-        answer3: "The distance between Mars and Venus",
-        correctAnswer: "The distance between the Earth and the Sun"
+        questionText: "Who was the first person in space?",
+        answer1: "Neil Amstrong",
+        answer2: "Yuri Gagarin",
+        answer3: "Tim Peake",
+        correctAnswer: "Yuri Gagarin"
     },
     {
         questionNumber: 8,
@@ -96,6 +96,38 @@ const questionBank = [
         answer3: "Venus",
         correctAnswer: "Venus"
     },
+    {
+        questionNumber: 13,
+        questionText: "Approximately, what is the escape velocity of Earth?",
+        answer1: "30,000 kph",
+        answer2: "40,000 kph",
+        answer3: "50,000 kph",
+        correctAnswer: "40,000 kph"
+    },
+    {
+        questionNumber: 14,
+        questionText: "Approximately, what is the escape velocity of Earth?",
+        answer1: "30,000 kph",
+        answer2: "40,000 kph",
+        answer3: "50,000 kph",
+        correctAnswer: "40,000 kph"
+    },
+    {
+        questionNumber: 14,
+        questionText: "How many planets can be seen without a telescope?",
+        answer1: "3",
+        answer2: "6",
+        answer3: "5",
+        correctAnswer: "5"
+    },
+    {
+        questionNumber: 14,
+        questionText: "How many 'rovers' have been successfully operated on Mars?",
+        answer1: "6",
+        answer2: "4",
+        answer3: "2",
+        correctAnswer: "6"
+    },
 ];
 
 /** Enter Name Page */
@@ -127,15 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         let scoreToPass = sessionStorage.getItem("scoreToPass");
         let userNameToPass = sessionStorage.getItem("userNameToPass");
-        console.log("usernametopass", userNameToPass);
-        console.log("scoreToPass", scoreToPass);
     };
 });
 
 /** Next Question Function, called after either a correct or wrong answer is entered */
 
 let startCount = 0;
-let questionsMax = 10;
 let finalScore = 0;
 
 /** Function to shuffle questions array at start of quiz */
@@ -165,7 +194,6 @@ function firstQuestion() {
     document.getElementById("answer3").innerHTML = questionBank[i].answer3;
 
     let currentQuestionCorrectAnswer = questionBank[i].correctAnswer;
-    console.log("Answer check", currentQuestionCorrectAnswer);
 
     setCorrectAnswer(currentQuestionCorrectAnswer);
 };
@@ -180,7 +208,6 @@ function nextQuestion(currentCount) {
         document.getElementById("answer3").innerHTML = questionBank[currentCount].answer3;
 
         let currentQuestionCorrectAnswer = questionBank[currentCount].correctAnswer;
-        console.log("Answer check", currentQuestionCorrectAnswer);
 
         setCorrectAnswer(currentQuestionCorrectAnswer);
         return currentQuestionCorrectAnswer;
@@ -204,14 +231,10 @@ function setCorrectAnswer(currentQuestionCorrectAnswer) {
 
 function checkAnswer() {
     let buttons = document.getElementsByTagName("button");
-    console.log("Button pressed");
-
     if (this.getAttribute("data-type") === "correct") {
-        console.log("correct");
         this.className = "correct-answer-button";
         addCorrectScore();
     } else {
-        console.log("wrong");
         this.className = "incorrect-answer-button";
         for (let button of buttons) {
             if (button.getAttribute("data-type") === "correct")
@@ -233,14 +256,7 @@ function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("score").innerHTML);
     let newScore = oldScore + 10;
     document.getElementById("score").innerHTML = newScore;
-    console.log("score");
-    console.log("oldScore", oldScore);
-    console.log(newScore);
     finalScore = newScore;
-    localStorage.setItem("finalScore", "100");
-    console.log("Final Score", finalScore);
-    console.log(localStorage.getItem("finalScore"));
-
     setTimeout(questionStyleReset, 2000);
 
     return finalScore;
@@ -255,7 +271,6 @@ function wrongAnswer() {
 /** Function to return answer buttons back to normal style */
 
 function questionStyleReset() {
-    console.log("reset");
     let changeButtons = document.getElementsByTagName("button");
 
     for (let button of changeButtons) {
@@ -277,11 +292,7 @@ function questionStyleReset() {
 function questionCounter() {
     if (startCount < 4) {
         let currentCount = startCount++;
-
-        console.log("count", currentCount);
-
         nextQuestion(currentCount);
-
         return currentCount;
     } else {
         endQuiz(finalScore);
@@ -293,7 +304,6 @@ function questionCounter() {
 function endQuiz(finalScore) {
     let scoreToPass = finalScore;
     sessionStorage.setItem("scoreToPass", scoreToPass);
-    console.log("final score", scoreToPass, sessionStorage.getItem("scoreToPass"));
     location.assign("result.html");
     document.getElementById("final-score").innerHTML = finalScore;
     document.getElementById("final-score").innerHTML = sessionStorage.getItem("scoreToPass");
@@ -317,24 +327,13 @@ function resultDisplay() {
 let interimLeaderboard = [];
 
 function createLeaderboardArray() {
-    let rankCells = document.getElementsByClassName("table-rank-cell");
     let nameCells = document.getElementsByClassName("table-name-cell");
     let scoreCells = document.getElementsByClassName("table-score-cell");
-    console.log("cells", rankCells);
-    console.log("names", nameCells);
-    console.log("scores", scoreCells);
-    console.log("first rank", rankCells[0].innerHTML);
     for (let i = 0; i < 5; i++) {
         let individual = {};
-        console.log(i);
-        console.log(rankCells[i].innerHTML);
-        console.log(nameCells[i].innerHTML);
-        console.log(scoreCells[i].innerHTML);
         individual.userName = nameCells[i].innerHTML;
         individual.userScore = scoreCells[i].innerHTML;
-        console.log("individual", individual);
         interimLeaderboard.push(individual);
-        console.log("leaderboard", interimLeaderboard);
     }
     findLowestScore();
 }
@@ -343,16 +342,12 @@ let scoreCheckArray = [];
 let minScore = 0;
 
 function findLowestScore() {
-    console.log("array length", interimLeaderboard.length);
     for (let i = 0; i < 5; i++) {
         if (i < 5) {
             let scoreToInput = interimLeaderboard[i].userScore;
-            console.log("score", scoreToInput);
             scoreCheckArray.push(scoreToInput);
-            console.log(scoreCheckArray);
             let minScore = Math.min(...scoreCheckArray);
 
-            console.log("lowest score", minScore);
             sessionStorage.setItem("minScore", minScore);
         }
     }
@@ -360,13 +355,8 @@ function findLowestScore() {
 };
 
 function checkIfScoreLeaderboard() {
-    console.log("Start of score check");
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     let minScore = sessionStorage.getItem("minScore");
-    console.log(scoreToPass);
-    console.log(minScore);
-    alert("Score check", minScore, scoreToPass);
-    console.log("min score check");
     if (scoreToPass <= minScore) {
         alert("Not this time pilot,try again");
     } else {
@@ -375,36 +365,17 @@ function checkIfScoreLeaderboard() {
     }
 };
 
-function createNewLeaderboard() {
-    console.log(scoreCheckArray);
-    console.log("Array", scoreCheckArray);
-    let scoreToPass = sessionStorage.getItem("scoreToPass");
-    console.log("Score to pass from storage", scoreToPass);
-    for (let i = 0; i < 5; i++) {
-        console.log("This score", scoreCheckArray[i]);
-        if (scoreToPass > scoreCheckArray[i]) {
-            console.log("Score higher", scoreCheckArray[i]);
-        }
-    }
-    test();
-}
-
 let newEntry = [];
 let newLeaderboard = [];
 
-function test() {
-    console.log("test start");
+function createNewLeaderboard() {
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     let userNameToPass = sessionStorage.getItem("userNameToPass");
     interimLeaderboard.pop();
-    console.log("popped leaderboard", interimLeaderboard);
     newEntry.userName = userNameToPass;
     newEntry.userScore = scoreToPass;
-    console.log("new entry", newEntry);
     interimLeaderboard.push(newEntry);
-    console.log("updated leaderboard", interimLeaderboard);
     interimLeaderboard.sort((a, b) => (a.userScore < b.userScore) ? 1 : -1);
-    console.log("sorted?", interimLeaderboard);
 
     updateLeaderboard();
 }
