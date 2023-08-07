@@ -398,6 +398,33 @@ body {
     padding-top: 30px;
 }
 
+/** Styling for 404 Error Page */
+
+#error-page-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#error-page-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.7);
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#back-home-button {
+    width: 200px;
+}
+
 /** Media query for screens smaller than 950px */
 
 @media screen and (max-width: 950px) {
@@ -647,5 +674,13 @@ body {
 
     #instructions-footer-container>a {
         padding: 20px;
+    }
+
+    #error-page-main {
+        padding-top: 30px;
+    }
+
+    #error-page-container {
+        height: 400px;
     }
 }

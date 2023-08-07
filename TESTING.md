@@ -24,7 +24,6 @@ Later issues on first deploying my website, reviewed with my mentor were:
 - [Manual Testing](#manual-testing)
 - [First Time Visitors](#first-time-visitors)
 - [Return Visitors](#return-visitor)
-- [History/Samurai Enthusiast](#historysamurai-enthusiast)
 - [Full Testing](#full-testing)
 - [Homepage](#homepage)
 - [Rise Page](#rise-page)
