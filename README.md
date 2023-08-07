@@ -252,7 +252,7 @@ This was website was deployed using Github pages. Instructions to do this are:
 
 1. Go to Github and Log in (or sign up).
 
-2. Find the repository for this project, TomLiDev/Oda-Nobunagav1.
+2. Find the repository for this project, TomLiDev/Space-Quiz-Pilot-Assessment.
 
 3. Click on the Settings link.
 
@@ -268,7 +268,7 @@ This was website was deployed using Github pages. Instructions to do this are:
 
 1. Log in (or sign up) to Github.
 
-2. Go to the repository for this project, TomLiDev/Oda-Nobunagav1.
+2. Go to the repository for this project, TomLiDev/Space-Quiz-Pilot-Assessment.
 
 3. Click the Fork button in the top right corner.
 
@@ -276,7 +276,7 @@ This was website was deployed using Github pages. Instructions to do this are:
 
 1. Log in (or sign up) to GitHub.
 
-2. Go to the repository for this project, TomLiDev/Oda-Nobunagav1.
+2. Go to the repository for this project, TomLiDev/Space-Quiz-Pilot-Assessment.
 
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 
@@ -294,21 +294,31 @@ Please see seperate testing.md for full details.
 
 ### Code Used
 
-The following sites were used for code:
+The following sites were used for information/code:
 
 ####
 
-Make it random algorithm.
+#### Fisher-Yates Shuffle Algorithm
 
-Passing value from one page to another in session storage.
+https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array
+
+#### Session Storage
+
+https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
+
+#### Sorting Array of Objects Based on Shared Object Property
+
+https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/
 
 ### Content
 
 The majority of the content was created by the author.
 
-This site was used for the background image.
+This site was used for the background image:
+https://free4kwallpapers.com/space/space-background-wallpaper--27kA
 
-Some of the questions were taken/inspired from this website.
+Some of the quiz questions came from this site:
+https://icebreakerideas.com/space-trivia/
 
 ## Acknowledgements
 
