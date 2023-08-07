@@ -136,7 +136,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 #instructions-container {
@@ -146,15 +146,15 @@ body {
     width: 60%;
     justify-content: center;
     align-items: center;
-    height: 550px;
+    height: 600px;
     border-radius: 50px;
-    padding-left: 20px;
+    padding-left: 30px;
     padding-right: 20px;
 }
 
 #instructions-container>h2 {
-    font-size: 300%;
-    padding-bottom: 30px;
+    font-size: 250%;
+    padding-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -168,10 +168,24 @@ body {
 #instruction-list {
     font-size: 120%;
     line-height: 40px;
+    padding-left: 30px;
 }
 
 #begin-button-instructions {
-    margin-right: 155px;
+    display: contents;
+}
+
+#instructions-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 300%;
+    height: auto;
+}
+
+#instructions-footer-container>a {
+    padding: 60px;
+    color: aliceblue;
 }
 
 /** Styling for enter name page **/
@@ -465,9 +479,38 @@ body {
     #leaderboard-footer-container {
         margin-top: 50px;
     }
+
+    #instructions {
+        padding-top: 40px;
+    }
+
+    #instructions-container {
+        width: 80%;
+        height: 600px;
+    }
+
+    #instructions-container>h2 {
+        font-size: 200%;
+        padding-bottom: 20px;
+    }
+
+    #instructions-container>h3 {
+        font-size: 120%;
+        padding: 10px;
+    }
+
+    #instruction-list {
+        font-size: 110%;
+        line-height: 40px;
+        padding-left: 30px;
+    }
+
+    #instructions-footer-container>a {
+        padding: 50px;
+    }
 }
 
-/** Media query for screens smaller than 700px, this only really needed for the leaderboard table */
+/** Media query for screens smaller than 700px */
 
 @media screen and (max-width: 700px) {
     #leaderboard-table {
@@ -491,6 +534,35 @@ body {
 
     #footer-container {
         margin-top: 30px;
+    }
+
+    #instructions {
+        padding-top: 20px;
+    }
+
+    #instructions-container {
+        width: 80%;
+        height: 600px;
+    }
+
+    #instructions-container>h2 {
+        font-size: 150%;
+        padding-bottom: 0px;
+    }
+
+    #instructions-container>h3 {
+        font-size: 100%;
+        padding: 10px;
+    }
+
+    #instruction-list {
+        font-size: 100%;
+        line-height: 30px;
+        padding-left: 30px;
+    }
+
+    #instructions-footer-container>a {
+        padding: 30px;
     }
 }
 
@@ -568,5 +640,13 @@ body {
 
     #leaderboard-table-container>h2 {
         font-size: 200%;
+    }
+
+    #instruction-list {
+        line-height: 25px;
+    }
+
+    #instructions-footer-container>a {
+        padding: 20px;
     }
 }
