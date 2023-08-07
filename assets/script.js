@@ -1,3 +1,5 @@
+/** Question bank, an array of objects to be shuffled at quiz start */
+
 
 const questionBank = [
     {
@@ -130,14 +132,19 @@ const questionBank = [
     },
 ];
 
-/** Enter Name Page */
+/** Enter Name Page Function, simply takes text input from name field and
+ * stores it as userNameToPass in session storage for use later in the game
+ */
 
 function getUserName() {
     let userNameToPass = document.getElementsByName("name-input")[0].value;
     sessionStorage.setItem("userNameToPass", userNameToPass);
 }
 
-/**  Overall start game function */
+/**  Overall controlling function, calls different functions based on the page 
+ * which has been loaded, e.g. if body = quiz-main then the shuffle questions 
+ * function is called, which is the start of the quiz.  
+ */
 
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementsByTagName("body")[0].id === "username") {
@@ -154,15 +161,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let buttons = document.getElementsByClassName("answer-buttons");
         for (let button of buttons) {
             button.addEventListener("click", checkAnswer);
-        };
+        }
         shuffleQuestions(questionBank);
-    } else {
-        let scoreToPass = sessionStorage.getItem("scoreToPass");
-        let userNameToPass = sessionStorage.getItem("userNameToPass");
-    };
+    }
 });
-
-/** Next Question Function, called after either a correct or wrong answer is entered */
 
 let startCount = 0;
 let finalScore = 0;
@@ -268,7 +270,9 @@ function wrongAnswer() {
     setTimeout(questionStyleReset, 2000);
 };
 
-/** Function to return answer buttons back to normal style */
+/** Function to return answer buttons back to normal style, called after
+ * either a correct or incorrect answer
+ */
 
 function questionStyleReset() {
     let changeButtons = document.getElementsByTagName("button");
@@ -339,7 +343,10 @@ function createLeaderboardArray() {
 }
 
 let scoreCheckArray = [];
-let minScore = 0;
+
+/** Function to find the lowest score in the existing leaderboard, this value
+ * is fed to checkIfScoreLeaderboard function
+ */
 
 function findLowestScore() {
     for (let i = 0; i < 5; i++) {
@@ -354,6 +361,10 @@ function findLowestScore() {
     checkIfScoreLeaderboard();
 };
 
+/** Function to see if the users score is greater than the lowest score 
+ * currently on the leaderboard.
+ */
+
 function checkIfScoreLeaderboard() {
     let scoreToPass = sessionStorage.getItem("scoreToPass");
     let minScore = sessionStorage.getItem("minScore");
@@ -365,8 +376,15 @@ function checkIfScoreLeaderboard() {
     }
 };
 
+/** First function called if user score is high enough to make the leaderboard.
+ * Function removes (pops) lowest score off the existing leaderboard array.
+ * New object is created with user name and score.
+ * This object added to leaderboard array.
+ * Leaderboard array then sorted by the score property, so that array is ordered
+ * high to low, ready to be put back into leaderboard.
+ */
+
 let newEntry = [];
-let newLeaderboard = [];
 
 function createNewLeaderboard() {
     let scoreToPass = sessionStorage.getItem("scoreToPass");
@@ -379,6 +397,9 @@ function createNewLeaderboard() {
 
     updateLeaderboard();
 }
+
+/** Function which puts newly updated leaderboard array (with username and
+ * score in correct rank) back into the HTML table itself */
 
 function updateLeaderboard() {
     let nameCells = document.getElementsByClassName("table-name-cell");
