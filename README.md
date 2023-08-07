@@ -206,7 +206,7 @@ Difficulty Options - I'd like to give users the ability to choose between diffic
 
 This site has been built to be as accessible as possible, specifically:
 
-- All images have alt text attributes and all anchors have aria labels for use by screen readers.
+- All images have alt text attributes and all links have aria labels for use by screen readers.
 
 - The colour scheme has been chosen to ensure a good level of contrast is maintained for text across the site.
 

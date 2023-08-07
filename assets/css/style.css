@@ -231,6 +231,13 @@ body {
     display: contents;
 }
 
+#enter-name-container label {
+    display: block;
+    font-size: 300%;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
 /** Styling for main quiz itself and questions **/
 
 #questions {
