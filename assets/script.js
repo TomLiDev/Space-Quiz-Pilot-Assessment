@@ -1,6 +1,8 @@
 /** Question bank, an array of objects to be shuffled at quiz start */
 
+import { questionBank } from "/assets/js/questionBank.js";
 
+/** 
 const questionBank = [
     {
         questionNumber: 1,
@@ -132,6 +134,8 @@ const questionBank = [
     },
 ];
 
+*/
+
 /** Enter Name Page Function, simply takes text input from name field and
  * stores it as userNameToPass in session storage for use later in the game
  */
@@ -166,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-let startCount = 0;
+let stopCount = 0;
 let finalScore = 0;
 
 /** Function to shuffle questions array at start of quiz */
@@ -203,7 +207,7 @@ function firstQuestion() {
 /** Function for every subsequent question after first */
 
 function nextQuestion(currentCount) {
-    while (currentCount < 4) {
+    while (currentCount < 6) {
         document.getElementById("question-text").innerHTML = questionBank[currentCount].questionText;
         document.getElementById("answer1").innerHTML = questionBank[currentCount].answer1;
         document.getElementById("answer2").innerHTML = questionBank[currentCount].answer2;
@@ -294,8 +298,8 @@ function questionStyleReset() {
 /** Question Counter Function */
 
 function questionCounter() {
-    if (startCount < 4) {
-        let currentCount = startCount++;
+    if (stopCount < 6) {
+        let currentCount = stopCount++;
         nextQuestion(currentCount);
         return currentCount;
     } else {
