@@ -4,11 +4,11 @@
 
 This project was intended to provide an engaging and fun quiz for users to test their knowledge on space and the solar system.
 
-![An image of the finished website on different devices](documentation/readme-intro.png)
+![An image of the finished website on different devices](documentation/space-quiz-homepage-devices.png)
 
 Please use the link below to view the live, deployed site:
 
-[Oda Nobunaga Live Site](https://tomlidev.github.io/Oda-Nobunagav1/)
+[Space Quiz - Pilot Assessment Live Site](https://tomlidev.github.io/Space-Quiz-Pilot-Assessment/)
 
 ## CONTENTS
 
@@ -32,15 +32,13 @@ Please use the link below to view the live, deployed site:
 
 - [Homepage](#homepage)
 
-- [Rise Page](#rise-page)
+- [Username Page](#username-page)
 
-- [Reign Page](#reign-page)
+- [Quiz Main page](#quiz-main-page)
 
-- [Legacy Page](#legacy-page)
+- [Results Page](#results-page)
 
-- [Sign Up Form](#sign-up-form)
-
-- [Thank you Page](#thank-you-page)
+- [Leaderboard](#leaderboard)
 
 - [404 Error Page](#404-error-page)
 
@@ -116,23 +114,9 @@ Please use the links below to view the relevant wireframe.
 
 [Homepage Wireframe](https://share.balsamiq.com/c/v3qHooymfGyyEyCx9uEb9t.png)
 
-[Rise Page Wireframe](https://share.balsamiq.com/c/4XHgkXZpHDEm6hsLnyTWFw.png)
-
-[Reign Page Wireframe](https://share.balsamiq.com/c/dZwjwN7p92MaoszVH6QtVR.png)
-
-[Legacy Page Wireframe](https://share.balsamiq.com/c/nqA2hcoZaDui433BzNUciM.png)
-
 [Homepage Mobile Wireframe](https://share.balsamiq.com/c/kboxySvsPoZ6vGataXtcPX.png)
 
-[Rise Page Mobile Wireframe](https://share.balsamiq.com/c/pRRHV5QAdkH1ZwD97XFLDr.png)
-
-[Reign Page Mobile Wireframe](https://share.balsamiq.com/c/xgnLqqmHmFKpsLG5Rzr7hB.png)
-
-[Legacy Page Mobile Wireframe](https://share.balsamiq.com/c/h6eQVWLUi3Vt7jMPAzWmto.png)
-
-[404/Thank you page, Desktop and Mobile Wireframe](https://share.balsamiq.com/c/tzDT9VJSwPWJCvZkviFija.png)
-
-[Form page Desktop and Mobile Wireframe](https://share.balsamiq.com/c/8oWTJvxPUwHagAJNFR4EmU.png)
+[404 Desktop and Mobile Wireframe](https://share.balsamiq.com/c/tzDT9VJSwPWJCvZkviFija.png)
 
 ## Features
 
@@ -156,15 +140,20 @@ I did originally have this footer in a black bar running the length of the botto
 
 On the homepage the user is presented with the options to Start a new quiz, view instructions in How to play and View the leaderboard. Each of these buttons sit centrally in the middle of the page, held within a semi-transparent menu that sits on top of the space background image. The nav bar is at the top of the page and the social media links sit at the bottom.
 
-![An image of the homepage on different devices](documentation/readme-intro.png)
+![An image of the homepage on different devices](documentation/space-quiz-homepage-devices.png)
 
 ### Instructions Page
 
 The instructions page will present the user with a simple, short list of instuctions on how to play the game. As the game is a quiz and the options to select an answer in relation to the question being displayed are fairly obvious and intuitive the instructions will be brief.
+The instructions page will include a button to start a quiz, removing the need to go back to the home screen, making the user experience easier and quicker.
+
+![An image of the instructions page on different devices](documentation/instructions-page-devices.png)
 
 ### Username Page
 
-If the user selects to begin a quiz they will be presented with a page which asks them to enter a user name. This value will be passed through the quiz for use in the leaderboard later is the player scores highly enough.
+If the user selects to begin a quiz they will be presented with a page which asks them to enter a user name and then a button to start the quiz. This value will be passed through the quiz for use in the leaderboard later is the player scores highly enough.
+
+![An image of the enter username page on different devices](documentation/username-page-devices.png)
 
 ### Quiz Start
 
@@ -176,31 +165,32 @@ If the user selects an incorrect answer, the answer that they clicked will be hi
 
 Once the answer has been selected, the relevant on screen styling has occured, and the relevant scoring mechanism has taken place, Javascript will be used to change the content of the questions/answers and display the user with a new question. I will create a reasonably large datastructure to hold multiple questions that can be pulled, at random, into a quiz of 5 - 10 questions, so that the user has a good chance of getting a mixture of different questions each time they do the quiz.
 
-The ALGORITHM will be used to shuffle the question bank each time the quiz is loaded to ensure that the order of questions is different each time the player plays.
+The Fisher-Yates shuffle algorithm (see credits section for source) will be used to shuffle the question bank each time the quiz is loaded to ensure that the order of questions is different each time the player plays.
+
+![An image of the quiz start page on different devices](documentation/quiz-start-devices.png)
 
 At the end of the quiz the users final score will be passed to the results page.
 
-IMAGE
-
 ### Result Page
 
-The result page will be shown to the user at the end of the quiz. It will show the final calculated score from the quiz with some text stating well done!
+The result page will be shown to the user at the end of the quiz. It will show the users enter player name, their final calculated score from the quiz with some text stating well done!
+There will then a button to take the user to the leaderboard to see if/where their score ranks against othe players.
 
-The player will then have a button to take them to the leaderboard and show them if/where their score has ranked.
-
-![An image of the reign page shown on different devices](documentation/reign-page-devices.PNG)
-
-### Sign Up Form
-
-### Thank you page
-
-### 404 Error Page
+![An image of the results page shown on different devices](documentation/results-page-devices.PNG)
 
 ### Leaderboard
 
-The leaderboard page will be shown after the user has viewed their final result, or if the player chooses to navigate to the leaderboard directly from the home page. This will consist of a table showing the ranking, name and score of other players results.
+The leaderboard page will be shown after the user has clicked the leaderboard button after viewing their final result, or if the player chooses to navigate to the leaderboard directly from the home page, or from the nav bar link. This will consist of a table showing the ranking, name and score of other players results.
+
+The leaderboard will update with a new player name and score, in the relevant rank if that score is high enough to beat the lowest score on the leaderboard at the time.
+
+The leaderboard will include a button below the ranking table itself to start another quiz. This removes the need to navigate back to the homepage and keeps the player playing the game to improve their score, greatly increasing user experience and engagement with the game itself.
+
+![An image of the leaderboard shown on different devices](documentation/leaderboard-devices.PNG)
 
 Time permitting, I would like to incorporate some code so that if the player has scored highly enough to enter the leaderboard, their name/score/ranking row is highlighted so it is obvious.
+
+### 404 Error Page
 
 ## Future Implementations/Plans
 
