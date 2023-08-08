@@ -155,196 +155,164 @@ No errors were raised on any page.
 
 Full testing of the website was performed on a Dell optiplex desktop on 25 inch Toshiba and Soundwave monitors, Dell Lattitude 5510 14 inch screen laptop, iPad 8th generation, Samsung Galaxy S10, iPhone 14 pro.
 
-Google chrome developer tools was also used to text at a range of different pixel sizes.
+Google chrome developer tools was also used to test at a range of different pixel sizes.
 
 Testing was conducted using Google Chrome, MS Edge and Safari.
 
 ### Homepage
 
-| Feature/Function            | Expected Outcome                                                                                                    | Method of Test    | Result                                          | Pass/Fail |
-| :-------------------------- | :------------------------------------------------------------------------------------------------------------------ | :---------------- | :---------------------------------------------- | :-------- |
-| NAVBAR                      |                                                                                                                     |                   |                                                 |
-| Oda Nobunaga Link           | Return/refresh home page on click                                                                                   | Clicked link      | Returned to home                                | Pass      |
-| Oda Nobunaga Hover          | Underline appears under text.                                                                                       | Hovered over link | Underline appeared                              | Pass      |
-| RISE Link                   | Return/refresh to Rise page on click                                                                                | Clicked link      | Returned to Rise page                           | Pass      |
-| RISE Hover                  | Underline appears under text.                                                                                       | Hovered over link | Underline appeared                              | Pass      |
-| REIGN Link                  | Return/refresh to Reign page on click                                                                               | Clicked link      | Returned to Reign page                          | Pass      |
-| REIGN Hover                 | Underline appears under text.                                                                                       | Hovered over link | Underline appeared                              | Pass      |
-| LEGACY Link                 | Return/refresh to Legacy page on click                                                                              | Clicked link      | Returned to Legacy page                         | Pass      |
-| LEGACY Hover                | Underline appears under text.                                                                                       | Hovered over link | Underline appeared                              | Pass      |
-| FOOTER                      |                                                                                                                     |                   |                                                 |
-| Facebook Icon Link          | Opens Facebook in seperate browser on click                                                                         | Clicked icon      | Opened Facebook in seperate tab                 | Pass      |
-| Instagram Icon Link         | Opens Instagram in seperate browser on click                                                                        | Clicked icon      | Opened Instagram in seperate tab                | Pass      |
-| Twitter Icon Link           | Opens Twitter in seperate browser on click                                                                          | Clicked icon      | Opened Twitter in seperate tab                  | Pass      |
-| Linkedin Icon Link          | Opens Linkedin in seperate browser on click                                                                         | Clicked icon      | Opened Linkedin in seperate tab                 | Pass      |
-| HOMEPAGE                    |                                                                                                                     |                   |                                                 |
-| Rise Character Link         | When clicked user will be redirected to Rise page                                                                   | Clicked link      | Redirected to Rise page                         | Pass      |
-| Rise Character Link Hover   | When hovering over Rise page link a black border will be displayed around the character and date immediatly below   | Hover over link   | Black border appeared around character and date | Pass      |
-| Reign Character Link        | When clicked user will be redirected to Reign page                                                                  | Clicked link      | Redirected to Reign page                        | Pass      |
-| Reign Character Link Hover  | When hovering over Reign page link a black border will be displayed around the character and date immediatly below  | Hover over link   | Black border appeared around character and date | Pass      |
-| Legacy Character Link       | When clicked user will be redirected to Legacy page                                                                 | Clicked link      | Redirected to Legacy page                       | Pass      |
-| Legacy Character Link Hover | When hovering over Legacy page link a black border will be displayed around the character and date immediatly below | Hover over link   | Black border appeared around character and date | Pass      |
-| FORM LINK                   |                                                                                                                     |                   |                                                 |           |
-| Sign Up Link                | When clicked the sign up link will redirect the user to the sign up form                                            | clicked link      | redirected to form                              | Pass      |
-| Sign Up Link Hover          | When hovering over sign up link the text will be underlined                                                         | Hover over link   | Underline appeared                              | Pass      |
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
 
-### Rise Page
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| HOMEPAGE | | | |
+| Begin! Link | When clicked user will be directed to username page | Clicked link | Redirected to username page | Pass |
+| How to play Link | When clicked user will be redirected to instructions page | Clicked link | Redirected to instructions page | Pass |
+| Leaderboard Link | When clicked user will be redirected to Leaderboard page | Clicked link | Redirected to Leaderboard page | Pass |
 
-| Feature/Function    | Expected Outcome                                                         | Method of Test    | Result                           | Pass/Fail |
-| :------------------ | :----------------------------------------------------------------------- | :---------------- | :------------------------------- | :-------- |
-| NAVBAR              |                                                                          |                   |                                  |
-| Oda Nobunaga Link   | Return/refresh home page on click                                        | Clicked link      | Returned to home                 | Pass      |
-| Oda Nobunaga Hover  | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| RISE Link           | Return/refresh to Rise page on click                                     | Clicked link      | Returned to Rise page            | Pass      |
-| RISE Hover          | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| REIGN Link          | Return/refresh to Reign page on click                                    | Clicked link      | Returned to Reign page           | Pass      |
-| REIGN Hover         | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| LEGACY Link         | Return/refresh to Legacy page on click                                   | Clicked link      | Returned to Legacy page          | Pass      |
-| LEGACY Hover        | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| FOOTER              |                                                                          |                   |                                  |
-| Facebook Icon Link  | Opens Facebook in seperate browser on click                              | Clicked icon      | Opened Facebook in seperate tab  | Pass      |
-| Instagram Icon Link | Opens Instagram in seperate browser on click                             | Clicked icon      | Opened Instagram in seperate tab | Pass      |
-| Twitter Icon Link   | Opens Twitter in seperate browser on click                               | Clicked icon      | Opened Twitter in seperate tab   | Pass      |
-| Linkedin Icon Link  | Opens Linkedin in seperate browser on click                              | Clicked icon      | Opened Linkedin in seperate tab  | Pass      |
-| FORM LINK           |                                                                          |                   |                                  |           |
-| Sign Up Link        | When clicked the sign up link will redirect the user to the sign up form | clicked link      | redirected to form               | Pass      |
-| Sign Up Link Hover  | When hovering over sign up link the text will be underlined              | Hover over link   | Underline appeared               | Pass      |
+### Username Page
 
-### Reign Page
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
 
-| Feature/Function    | Expected Outcome                                                         | Method of Test      | Result                           | Pass/Fail |
-| :------------------ | :----------------------------------------------------------------------- | :------------------ | :------------------------------- | :-------- |
-| NAVBAR              |                                                                          |                     |                                  |
-| Oda Nobunaga Link   | Return/refresh home page on click                                        | Clicked link        | Returned to home                 | Pass      |
-| Oda Nobunaga Hover  | Underline appears under text.                                            | Hovered over link   | Underline appeared               | Pass      |
-| RISE Link           | Return/refresh to Rise page on click                                     | Clicked link        | Returned to Rise page            | Pass      |
-| RISE Hover          | Underline appears under text.                                            | Hovered over link   | Underline appeared               | Pass      |
-| REIGN Link          | Return/refresh to Reign page on click                                    | Clicked link        | Returned to Reign page           | Pass      |
-| REIGN Hover         | Underline appears under text.                                            | Hovered over link   | Underline appeared               | Pass      |
-| LEGACY Link         | Return/refresh to Legacy page on click                                   | Clicked link        | Returned to Legacy page          | Pass      |
-| LEGACY Hover        | Underline appears under text.                                            | Hovered over link   | Underline appeared               | Pass      |
-| FOOTER              |                                                                          |                     |                                  |
-| Facebook Icon Link  | Opens Facebook in seperate browser on click                              | Clicked icon        | Opened Facebook in seperate tab  | Pass      |
-| Instagram Icon Link | Opens Instagram in seperate browser on click                             | Clicked icon        | Opened Instagram in seperate tab | Pass      |
-| Twitter Icon Link   | Opens Twitter in seperate browser on click                               | Clicked icon        | Opened Twitter in seperate tab   | Pass      |
-| Linkedin Icon Link  | Opens Linkedin in seperate browser on click                              | Clicked icon        | Opened Linkedin in seperate tab  | Pass      |
-| FORM LINK           |                                                                          |                     |                                  |           |
-| Sign Up Link        | When clicked the sign up link will redirect the user to the sign up form | clicked link        | redirected to form               | Pass      |
-| Sign Up Link Hover  | When hovering over sign up link the text will be underlined              | Hover over link     | Underline appeared               | Pass      |
-| VIDEO               |
-| Video play function | When clicked the video will play with audio                              | clicked play button | video started with audio         | Pass      |
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Username Page | | | |
+| Enter Name Field | When clicked placeholder text will clear OR user will get suggestions for previous names | Clicked in field | Placeholder text cleared OR given suggestions to select from previous name which populate field | Pass |
+| Start Quiz! | When clicked user will be redirected to quiz-start page and first question will be presented | Clicked link | Redirected to quiz-start page and first question loaded | Pass |
 
-### Legacy Page
+### Insructions Page
 
-| Feature/Function    | Expected Outcome                                                         | Method of Test    | Result                           | Pass/Fail |
-| :------------------ | :----------------------------------------------------------------------- | :---------------- | :------------------------------- | :-------- |
-| NAVBAR              |                                                                          |                   |                                  |
-| Oda Nobunaga Link   | Return/refresh home page on click                                        | Clicked link      | Returned to home                 | Pass      |
-| Oda Nobunaga Hover  | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| RISE Link           | Return/refresh to Rise page on click                                     | Clicked link      | Returned to Rise page            | Pass      |
-| RISE Hover          | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| REIGN Link          | Return/refresh to Reign page on click                                    | Clicked link      | Returned to Reign page           | Pass      |
-| REIGN Hover         | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| LEGACY Link         | Return/refresh to Legacy page on click                                   | Clicked link      | Returned to Legacy page          | Pass      |
-| LEGACY Hover        | Underline appears under text.                                            | Hovered over link | Underline appeared               | Pass      |
-| FOOTER              |                                                                          |                   |                                  |
-| Facebook Icon Link  | Opens Facebook in seperate browser on click                              | Clicked icon      | Opened Facebook in seperate tab  | Pass      |
-| Instagram Icon Link | Opens Instagram in seperate browser on click                             | Clicked icon      | Opened Instagram in seperate tab | Pass      |
-| Twitter Icon Link   | Opens Twitter in seperate browser on click                               | Clicked icon      | Opened Twitter in seperate tab   | Pass      |
-| Linkedin Icon Link  | Opens Linkedin in seperate browser on click                              | Clicked icon      | Opened Linkedin in seperate tab  | Pass      |
-| FORM LINK           |                                                                          |                   |                                  |           |
-| Sign Up Link        | When clicked the sign up link will redirect the user to the sign up form | clicked link      | redirected to form               | Pass      |
-| Sign Up Link Hover  | When hovering over sign up link the text will be underlined              | Hover over link   | Underline appeared               | Pass      |
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
 
-### Form Page
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Instructions Page | | | |
+| Begin! Button | When clicked user will be returned to username page | Clicked button | Returned to username page | Pass |
 
-| Feature/Function      | Expected Outcome                                                                             | Method of Test                               | Result                                                  | Pass/Fail |
-| :-------------------- | :------------------------------------------------------------------------------------------- | :------------------------------------------- | :------------------------------------------------------ | :-------- |
-| NAVBAR                |                                                                                              |                                              |                                                         |
-| Oda Nobunaga Link     | Return/refresh home page on click                                                            | Clicked link                                 | Returned to home                                        | Pass      |
-| Oda Nobunaga Hover    | Underline appears under text.                                                                | Hovered over link                            | Underline appeared                                      | Pass      |
-| RISE Link             | Return/refresh to Rise page on click                                                         | Clicked link                                 | Returned to Rise page                                   | Pass      |
-| RISE Hover            | Underline appears under text.                                                                | Hovered over link                            | Underline appeared                                      | Pass      |
-| REIGN Link            | Return/refresh to Reign page on click                                                        | Clicked link                                 | Returned to Reign page                                  | Pass      |
-| REIGN Hover           | Underline appears under text.                                                                | Hovered over link                            | Underline appeared                                      | Pass      |
-| LEGACY Link           | Return/refresh to Legacy page on click                                                       | Clicked link                                 | Returned to Legacy page                                 | Pass      |
-| LEGACY Hover          | Underline appears under text.                                                                | Hovered over link                            | Underline appeared                                      | Pass      |
-| FOOTER                |                                                                                              |                                              |                                                         |
-| Facebook Icon Link    | Opens Facebook in seperate browser on click                                                  | Clicked icon                                 | Opened Facebook in seperate tab                         | Pass      |
-| Instagram Icon Link   | Opens Instagram in seperate browser on click                                                 | Clicked icon                                 | Opened Instagram in seperate tab                        | Pass      |
-| Twitter Icon Link     | Opens Twitter in seperate browser on click                                                   | Clicked icon                                 | Opened Twitter in seperate tab                          | Pass      |
-| Linkedin Icon Link    | Opens Linkedin in seperate browser on click                                                  | Clicked icon                                 | Opened Linkedin in seperate tab                         | Pass      |
-| FORM ELEMENTS         |
-| First Name suggestion | When clicked, suggests options for names from previous forms                                 | Clicked field                                | Suggestions appeared                                    | Pass      |
-| First Name Validation | If not filled out, form will not allow submission                                            | Clicked submit form without first name       | Form didn't submit, prompted to fill out relevant field | Pass      |
-| Last Name suggestion  | When clicked, suggests options for names from previous forms                                 | Clicked field                                | Suggestions appeared                                    | Pass      |
-| Last Name Validation  | If not filled out, form will not allow submission                                            | Clicked submit form without last name        | Form didn't submit, prompted to fill out relevant field | Pass      |
-| Interest checkbox(es) | When clicked, checkbox will appear with a tick inside it                                     | Clicked checkboxes                           | Checkboxes displayed with tick inside                   | Pass      |
-| Email suggestion      | When clicked, suggests options for emails from previous forms                                | Clicked field                                | Suggestions appeared                                    | Pass      |
-| Email Validation      | If not filled out, form will not allow submission                                            | Clicked submit form without email filled out | Form didn't submit, prompted to fill out email field    | Pass      |
-| Submit                | When clicked, if required fields are filled out, redirects user to thankyou page             | Clicked with fields completed                | Redirected to thankyou page                             | Pass      |
-| Submit Hover          | When hovering mouse over submit button text will appear underlined with border around button | Hovered mouse over submit button             | Text appeared underlined, border appeared around button | Pass      |
+### Quiz Start
 
-### Thankyou Page
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
 
-| Feature/Function          | Expected Outcome                                             | Method of Test    | Result                           | Pass/Fail |
-| :------------------------ | :----------------------------------------------------------- | :---------------- | :------------------------------- | :-------- |
-| NAVBAR                    |                                                              |                   |                                  |
-| Oda Nobunaga Link         | Return/refresh home page on click                            | Clicked link      | Returned to home                 | Pass      |
-| Oda Nobunaga Hover        | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| RISE Link                 | Return/refresh to Rise page on click                         | Clicked link      | Returned to Rise page            | Pass      |
-| RISE Hover                | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| REIGN Link                | Return/refresh to Reign page on click                        | Clicked link      | Returned to Reign page           | Pass      |
-| REIGN Hover               | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| LEGACY Link               | Return/refresh to Legacy page on click                       | Clicked link      | Returned to Legacy page          | Pass      |
-| LEGACY Hover              | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| FOOTER                    |                                                              |                   |                                  |
-| Facebook Icon Link        | Opens Facebook in seperate browser on click                  | Clicked icon      | Opened Facebook in seperate tab  | Pass      |
-| Instagram Icon Link       | Opens Instagram in seperate browser on click                 | Clicked icon      | Opened Instagram in seperate tab | Pass      |
-| Twitter Icon Link         | Opens Twitter in seperate browser on click                   | Clicked icon      | Opened Twitter in seperate tab   | Pass      |
-| Linkedin Icon Link        | Opens Linkedin in seperate browser on click                  | Clicked icon      | Opened Linkedin in seperate tab  | Pass      |
-| THANKYOU LINK TO HOMEPAGE |
-| Link to homepage          | When clicked redirects user to homepage                      | Clicked link      | Redirected to homepage           | Pass      |
-| Hover on homepage link    | When hovering over text should be underlined with black line | Hovered over link | Black underline appeared         | Pass      |
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Quiz Start | | | |
+| Click correct Answer | When clicked user will have their selected button highlighted in green, all buttons will be disabled until next question, a score of 10 will be added to current score | Clicked correct answer | Correct answer/answer clicked highlighted in green, all buttons disabled until next question, score of 10 added | Pass |
+| Click incorrect Answer | When clicked user will have their selected button highlighted in red, correct answer will be highlighted in green, all buttons will be disabled until next question, a score of 10 will be added to current score | Clicked incorrect answer | Clicked answer/incorrect answer highlighted in red, correct answer highlighted in green, all buttons disabled until next question | Pass |
+| Next question load | After correct/incorrect action, 2 seconds pass and then next question loaded with answer buttons enabled | Clicked Answer | 2 seconds pass and next question loaded with answer buttons enabled | Pass |
+| Max questions reached | At max questions answered quiz is ended and user redirected to results page | Max questions reached | Returned to results page | Pass |
+
+### Result Page
+
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Results Page | | | |
+| Player name | When returned to result page, player name inputted on username field to show in space between Well done and You Scored text | Returned to page | Inputted player name shown in space between Well done and You Scored text | Pass |
+| Player Score | When returned to result page, player score should be taken and displayed next to Score: | Returned to page | Correct player score shown next to Score: | Pass |
+| Check the leaderboard link | When clicked, return use to the leaderboard | Clicked link | Returned to leaderboard | Pass |
+
+### Leaderboard
+
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Leaderboard | | | |
+| Well done! Alert | On being returned to leaderboard, if score is high enough to make leaderboard, alert appears on screen, saying Well done! Leaderboard shuffled accordingly (below) | Returned to page with high enough score | Well done! Alert | Pass |
+| Not this time pilot, try again. Alert | When returned to leaderboard with score lower than lowest score on leaderboard, alert will appear with text Not this time pilot, try again. | Returned to page with low score | Not this time pilot, try again. Alert | Pass |
+| Leaderboard reorder | If player score is high enough, after clicking okay on alert, leaderboard is shuffled with player score and name inputted into relevant rank | Clicked alert after high enough score | leaderboard reordered with name and score inputted into correct rank | Pass |
 
 ### 404 Error Page
 
-| Feature/Function       | Expected Outcome                                             | Method of Test    | Result                           | Pass/Fail |
-| :--------------------- | :----------------------------------------------------------- | :---------------- | :------------------------------- | :-------- |
-| NAVBAR                 |                                                              |                   |                                  |
-| Oda Nobunaga Link      | Return/refresh home page on click                            | Clicked link      | Returned to home                 | Pass      |
-| Oda Nobunaga Hover     | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| RISE Link              | Return/refresh to Rise page on click                         | Clicked link      | Returned to Rise page            | Pass      |
-| RISE Hover             | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| REIGN Link             | Return/refresh to Reign page on click                        | Clicked link      | Returned to Reign page           | Pass      |
-| REIGN Hover            | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| LEGACY Link            | Return/refresh to Legacy page on click                       | Clicked link      | Returned to Legacy page          | Pass      |
-| LEGACY Hover           | Underline appears under text.                                | Hovered over link | Underline appeared               | Pass      |
-| FOOTER                 |                                                              |                   |                                  |
-| Facebook Icon Link     | Opens Facebook in seperate browser on click                  | Clicked icon      | Opened Facebook in seperate tab  | Pass      |
-| Instagram Icon Link    | Opens Instagram in seperate browser on click                 | Clicked icon      | Opened Instagram in seperate tab | Pass      |
-| Twitter Icon Link      | Opens Twitter in seperate browser on click                   | Clicked icon      | Opened Twitter in seperate tab   | Pass      |
-| Linkedin Icon Link     | Opens Linkedin in seperate browser on click                  | Clicked icon      | Opened Linkedin in seperate tab  | Pass      |
-| LINK TO HOMEPAGE       |
-| Link to homepage       | When clicked redirects user to homepage                      | Clicked link      | Redirected to homepage           | Pass      |
-| Hover on homepage link | When hovering over text should be underlined with black line | Hovered over link | Black underline appeared         | Pass      |
+| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
+| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
+| NAVBAR            |                                             |                   |                              |
+| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
+| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
+| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
+
+FOOTER | | | |
+| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
+| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
+| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
+| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+| Instructions Page | | | |
+| Back to home | When clicked user returned to home page | Clicked button | Returned to homepage | Pass |
 
 ## Bugs
 
 ### Solved Bugs
 
-1. Passing Variables from Page to Page - Finding a reliable method to pass a variable value from one page to another took considerable time. Initially I explored using a 'hidden' HTML element somewhere on the page to store the values which could then be retrieved, but this was clunky and not a good solution. Eventually using the session storage proved the best solution as this allowed values such as username and final score to be passed across the pages, but would not be stored permanently as with local storage. It took time to get this to work as intended as it wasn't clear for some time that with session.storage, the variable must be retrieved and declared for each page/function that needs to use it.
+1. Passing Variables from Page to Page - Finding a reliable method to pass a variable value from one page to another took considerable time. Initially I explored using a 'hidden' HTML element somewhere on the page to store the values which could then be retrieved, but this was clunky and not a good solution. This was a major bug as I wanted to pass the username and user score through the quiz. Eventually using the session storage proved the best solution as this allowed values such as username and final score to be passed across the pages, but would not be stored permanently as with local storage. It took time to get this to work as intended as it wasn't clear for some time that with session.storage, the variable must be retrieved and declared for each page/function that needs to use it.
 
 2. Question Selection - A method of getting questions from the question bank to display to the user was a challenge. I wanted this order of questions to be different each time so the quiz stayed interesting. Initially I explored using a random number generating function, then using this number to select a question object from the question bank, put this question into an array, then have this array populate the questions and answers fields as the user selected answers. This method could have probably been made to work, but would have had the issue of making sure the same question was not selected twice. On discussing it with my mentor, he suggested the Fisher-Yates shuffle algorithm. After investigating, this was a neater solution as it created a completely randomised selection of questions from the existing question bank, which meant a simple i++ loop could be used to cycle through the questions. As long as the shuffle function was run at the beginning of each quiz the order of questions would be different and there was no chance the same question could be asked twice.
 
-3. Highlighting on Correct/Incorrect Answer - I wanted to introduce some visual colour highlighting to the user to make the quiz more visually exciting and give a clear indication on which questions they have answered correclty and which they have not.
+3. Highlighting on Correct/Incorrect Answer - I wanted to introduce some visual colour highlighting to the user to make the quiz more visually exciting and give a clear indication on which questions they have answered correclty and which they have not. Initially this was challenging because as soon as an answer was given, the function would load the next question and the styling would be almost instantly lost. To get round this, I introduced a timer which would delay the loading of the next question so the user had time to view the correct/incorrect answer. However this introduced another issue detailed below.
 
 4. Answer one question multiple times - For the correct/incorrect styling described above, I wanted the user to have a short period of time to view their answer and whether or not this was correct before the quiz loaded the next question. To do this I simple introduced a short timer from the point on an answer being clicked, until the next question is loaded. This worked well for the styling, a simple 2 second delay worked well to view the styling. However it did introduce the possibility that a user could click multiple answers for the same question, creating a large score from one question. This also has the knock on effect that if a user clicked the correct answer say 4 times, they would get a score of 40 for only answering one question correctly, but also then the quiz would immedialty load through the next 4 questions in quick succession, essentially breaking the quiz. The simple solution would be to remove the delay and have the next question load immediatly when an answer was clicked, but this would make any correct/incorrect answer styling impossible. My mentor suggested a simple solution of disabling the buttons, which I was unaware existed. Having this come into effect when the answer was clicked, and then set back to enabled when the next question was loaded, solved the issue and allowed me to keep the correct/incorrect styling.
 
 5. Leaderboard Ranking - Creating the leaderboard was challening, in particular having a new score and username enter the leaderboard in the correct row and move the other scores accordingly. After trying many different options I eventually found a solution on a stack overflow page which showed how to compare and sort objects in an array by the values of a particular property in that array. This allowed me to create an array from the scores already in the leaderboard, pop the lowest score off this array, enter the new score, sort the array so that the new score was placed in its corresponding rank. Then these values can be fed back into the leaderboard to create a new, updated leaderboard with the users name and score in the correct rank.
 
-### Known Issues
+Unfortunately the leaderboard does not retain these new updated values permanently, despite exploring options with local storage and document write functions. However after discussing this with my mentor it was explained that a permanently updated leaderboard was considered beyond the scope of this project as it would involve some kind of database which could store the values. This is something I would like to explore in a future version the game.
 
-1. The home icon in the nav bar underlines the world icon as well as the text of home. This is a minor aesthetic bug and has no real impact on the game or user experience. Given time I would have seperated the icon from the rest of the anchor tag, which wraps around the text and icon. I didn't do this because seperating them out would have created 3 items on the nav bar, which due to the styling would have appeared spread across the nav bar which wouldn't look very good. Given more time I would have explored seperating these and introducing style rules which kept them in relative place through different device screen sizes, but given the minor nature of the issue and time pressures this wasn't possible.
+6. Hover on home icon - Initially the hover pseudo class underlined the HOME text and the a line appeared under the globe icon as well. After some restructuring of the HTML the desired effect was achieved.
+
+### Known Issues
 
 2. Map on Rise Page
