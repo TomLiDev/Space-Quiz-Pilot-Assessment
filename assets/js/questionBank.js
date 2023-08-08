@@ -1,3 +1,4 @@
+/**
 
 export const questionBank = [
     {
@@ -129,3 +130,5 @@ export const questionBank = [
         correctAnswer: "6"
     },
 ];
+
+*/

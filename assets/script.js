@@ -1,7 +1,5 @@
 /** Question bank, an array of objects to be shuffled at quiz start */
 
-import { questionBank } from "/assets/js/questionBank.js";
-
 const questionBank = [
     {
         questionNumber: 1,
