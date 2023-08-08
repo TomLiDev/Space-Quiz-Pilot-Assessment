@@ -64,59 +64,45 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 #### Username page Desktop Lighthouse Scores
 
-![Screenshot of username page desktop lighthouse scores](documentation/rise-lighthouse.PNG)
+![Screenshot of username page desktop lighthouse scores](documentation/username-desktop-lighthouse.png)
 
-#### Rise Mobile Lighthouse Scores
+#### Username Page Mobile Lighthouse Scores
 
-![Screenshot of rise mobile lighthouse scores](documentation/rise-lighthouse-mobile.PNG)
+![Screenshot of username page mobile lighthouse scores](documentation/username-mobile-lighthouse.png)
 
-#### Reign Desktop Lighthouse Scores
+#### Quiz Start Desktop Lighthouse Scores
 
-![Screenshot of reign desktop lighthouse scores](documentation/reign-lighthouse.PNG)
+![Screenshot of Quiz Start desktop lighthouse scores](documentation/quiz-start-desktop-lighthouse.png)
 
-#### Reign Mobile Lighthouse Scores
+#### Quiz Start Mobile Lighthouse Scores
 
-![Screenshot of reign mobile lighthouse scores](documentation/reign-lighthouse-mobile.PNG)
+![Screenshot of Quiz Start mobile lighthouse scores](documentation/quiz-start-mobile-lighthouse.png)
 
-#### Legacy Desktop Lighthouse Scores
+#### Results Page Lighthouse Scores
 
-![Screenshot of legacy desktop lighthouse scores](documentation/legacy-lighthouse.PNG)
+![Screenshot of Results Page desktop lighthouse scores](documentation/result-desktop-lighthouse.png)
 
-#### Legacy Mobile Lighthouse Scores
+#### Results Page Mobile Lighthouse Scores
 
-![Screenshot of legacy mobile lighthouse scores](documentation/legacy-lighthouse-mobile.PNG)
+![Screenshot of Results Page mobile lighthouse scores](documentation/result-mobile-lighthouse.png)
 
-#### Form Desktop Lighthouse Scores
+#### Leaderboard Desktop Lighthouse Scores
 
-![Screenshot of form desktop lighthouse scores](documentation/form-lighthouse.PNG)
+![Screenshot of Leaderboard desktop lighthouse scores](documentation/leaderboard-desktop.png)
 
-#### Form Mobile Lighthouse Scores
+#### Leaderboard Mobile Lighthouse Scores
 
-![Screenshot of form mobile lighthouse scores](documentation/form-lighthouse-mobile.PNG)
-
-#### Thankyou page Desktop Lighthouse Scores
-
-![Screenshot of thank you page desktop lighthouse scores](documentation/thankyou-lighthouse.PNG)
-
-#### Thankyou page Mobile Lighthouse Scores
-
-![Screenshot of thank you page desktop lighthouse scores](documentation/thankyou-lighthouse-mobile.PNG)
-
-#### Thankyou page Desktop Lighthouse Score with refresh removed
-
-![Screenshot of thank you page desktop lighthouse scores after the refresh had been removed](documentation/thankyou-lighthouse-norefresh-desktop.PNG)
-
-#### Thankyou page Mobile Lighthouse Score with refresh removed
-
-![Screenshot of thank you page mobile lighthouse scores after the refresh had been removed](documentation/thankyou-lighthouse-norefresh-mobile.PNG)
+![Screenshot of Leaderboard mobile lighthouse scores](documentation/leaderboard-mobile-lighthouse.png)
 
 #### 404 Error Page Desktop Lighthouse Scores
 
-![Screenshot of 404 page desktop lighthouse scores](documentation/404-lighthouse.PNG)
+![Screenshot of Error Page desktop lighthouse scores](documentation/error-page-desktop-lighthouse.png)
 
 #### 404 Error Page Mobile Lighthouse Scores
 
-![Screenshot of 404 page mobile lighthouse scores](documentation/404-lighthouse-mobile.PNG)
+![Screenshot of 404 Error Page Mobile lighthouse scores](documentation/error-page-mobile-lighthouse.png)
+
+#### Thankyou page Desktop Lighthouse Score with refresh removed
 
 #### Findings and Actions
 
