@@ -440,6 +440,14 @@ body {
 
 #back-home-button {
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    background: aliceblue;
+    justify-content: center;
+    color: black;
+    border-style: outset;
 }
 
 /** Media query for screens smaller than 950px */

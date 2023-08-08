@@ -46,8 +46,8 @@ The W3C validator was used to validate all HTML pages and CSS in the style.css.
 - [Screenshot of index page W3C Validated](documentation/index-w3c.png)
 - [Screenshot of username page W3C Validated](documentation/username-w3c.png)
 - [Screenshot of quiz start page W3C Validated](documentation/quiz-start-w3c.png)
-- [Screenshot of results page W3C Validated](documentation/legacy-validated.PNG)
-- [Screenshot of leaderboard W3C Validated](documentation/form-validated.PNG)
+- [Screenshot of results page W3C Validated](documentation/result-w3c.png)
+- [Screenshot of leaderboard W3C Validated](documentation/leaderboard-w3c.png)
 - [Screenshot of 404 error page W3C Validated](documentation/404-validated.PNG)
 
 ### Lighthouse Testing
