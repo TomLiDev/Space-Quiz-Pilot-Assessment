@@ -39,10 +39,6 @@ body {
     color: aliceblue;
 }
 
-#earth-icon:hover {
-    text-decoration: none !important;
-}
-
 #logo-container {
     display: flex;
     flex-direction: row-reverse;

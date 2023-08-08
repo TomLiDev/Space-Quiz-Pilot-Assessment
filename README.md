@@ -94,7 +94,7 @@ I knew the colour scheme would be driven largely by the colours of the backgroun
 
 I used the font Exo 2 from google fonts for the site. I experimented with other font types to see which gave a futuristic sci fi feel, without making the text too outlandish or difficult to read. I feel that Exo 2 meets this requirement nicely, and when capitalised works well in the nav bar also.
 
-[Image of Garamond, Font Used on Website](documentation/Exo2-font.PNG)
+[Image of Garamond, Font Used on Website](documentation/exo2-font.png)
 
 San's serif is used as the back-up font if FONT cannot be loaded for any reason.
 
@@ -126,7 +126,7 @@ Please use the links below to view the relevant wireframe.
 
 Every page has the same navigation bar at the top, comprising a planet Earth icon and the word home in the top left. This is a link which takes the user back to the home page. In the right of the bar the user has the option to jump to the Leaderboard, I may also include a call to action such as - sign up for competitions/stay informed, which will bring the user to a sign up. Both these links will be made up of icons and text as a link to the relevant pages. I did experiment with just using an Icon or just using text but I feel the combination looks the best and provides the best navigation for the user.
 
-![Image of the Nav Bar, found at the top of all pages](documentation/nav-bar.PNG)
+![Image of the Nav Bar, found at the top of all pages](documentation/nav-bar.png)
 
 #### Footer
 
@@ -134,7 +134,7 @@ Every page has the same footer bar comprising icon links to Facebook, Instagram,
 
 I did originally have this footer in a black bar running the length of the bottom of the screen, but this looked a little odd so I tried the icons simply floating as the bottom and I think this looks much nicer and cleaner.
 
-![Image of the footer, found at the bottom of all pages](documentation/footer.PNG)
+![Image of the footer, found at the bottom of all pages](documentation/footer.png)
 
 ### Homepage
 
@@ -176,7 +176,7 @@ At the end of the quiz the users final score will be passed to the results page.
 The result page will be shown to the user at the end of the quiz. It will show the users enter player name, their final calculated score from the quiz with some text stating well done!
 There will then a button to take the user to the leaderboard to see if/where their score ranks against othe players.
 
-![An image of the results page shown on different devices](documentation/results-page-devices.PNG)
+![An image of the results page shown on different devices](documentation/results-page-devices.png)
 
 ### Leaderboard
 
@@ -186,7 +186,7 @@ The leaderboard will update with a new player name and score, in the relevant ra
 
 The leaderboard will include a button below the ranking table itself to start another quiz. This removes the need to navigate back to the homepage and keeps the player playing the game to improve their score, greatly increasing user experience and engagement with the game itself.
 
-![An image of the leaderboard shown on different devices](documentation/leaderboard-devices.PNG)
+![An image of the leaderboard shown on different devices](documentation/leaderboard-devices.png)
 
 Time permitting, I would like to incorporate some code so that if the player has scored highly enough to enter the leaderboard, their name/score/ranking row is highlighted so it is obvious.
 
