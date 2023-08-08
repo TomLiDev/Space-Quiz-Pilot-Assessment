@@ -138,6 +138,8 @@ const questionBank = [
 function getUserName() {
     let userNameToPass = document.getElementsByName("name-input")[0].value;
     sessionStorage.setItem("userNameToPass", userNameToPass);
+    console.log(userNameToPass);
+    location.assign("quiz-start.html");
 }
 
 /**  Overall controlling function, calls different functions based on the page 
@@ -147,7 +149,7 @@ function getUserName() {
 
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementsByTagName("body")[0].id === "username") {
-        let button = document.getElementById("start-quiz-actual-button");
+        let button = document.getElementById("start-quiz-button");
         button.addEventListener("click", getUserName);
     };
     if (document.getElementsByTagName("body")[0].id === "result") {
@@ -155,6 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     if (document.getElementsByTagName("body")[0].id === "leaderboard-page") {
         setTimeout(createLeaderboardArray, 100);
+        let button = document.getElementById("start-quiz-leaderboard-button");
+        button.addEventListener("click", leaderboardToHome);
     }
     if (document.getElementsByTagName("body")[0].id === "quiz-main") {
         let buttons = document.getElementsByClassName("answer-buttons");
@@ -326,6 +330,10 @@ function resultDisplay() {
  * checking user score against existing score, 
  * adding user score to array if high enough, 
  * updating leaderboard with new values */
+
+function leaderboardToHome() {
+    location.assign("quiz-start.html");
+}
 
 let interimLeaderboard = [];
 
