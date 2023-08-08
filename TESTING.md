@@ -159,23 +159,22 @@ Testing was conducted using Google Chrome, MS Edge and Safari.
 
 ### Homepage
 
-| Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
-| :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
-| NAVBAR            |                                             |                   |                              |
-| Home Link         | Return/refresh home page on click           | Clicked link      | Returned to home             | Pass      |
-| Home Link Hover   | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
-| Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
-| Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
-
-| Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
-| Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
-| Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
-| Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
-
-| HOMEPAGE | | | |
-| Begin! Link | When clicked user will be directed to username page | Clicked link | Redirected to username page | Pass |
-| How to play Link | When clicked user will be redirected to instructions page | Clicked link | Redirected to instructions page | Pass |
-| Leaderboard Link | When clicked user will be redirected to Leaderboard page | Clicked link | Redirected to Leaderboard page | Pass |
+| Feature/Function    | Expected Outcome                                          | Method of Test    | Result                           | Pass/Fail |
+| :------------------ | :-------------------------------------------------------- | :---------------- | :------------------------------- | :-------- |
+| NAVBAR              |                                                           |                   |                                  |
+| Home Link           | Return/refresh home page on click                         | Clicked link      | Returned to home                 | Pass      |
+| Home Link Hover     | Underline appears under text.                             | Hovered over link | Underline appeared               | Pass      |
+| Leaderboard Link    | Return/refresh to Leaderboard page on click               | Clicked link      | Returned to Leaderboard page     | Pass      |
+| Leaderboard Hover   | Underline appears under text.                             | Hovered over link | Underline appeared               | Pass      |
+| FOOTER              |                                                           |                   |                                  |
+| Facebook Icon Link  | Opens Facebook in seperate browser on click               | Clicked icon      | Opened Facebook in seperate tab  | Pass      |
+| Instagram Icon Link | Opens Instagram in seperate browser on click              | Clicked icon      | Opened Instagram in seperate tab | Pass      |
+| Twitter Icon Link   | Opens Twitter in seperate browser on click                | Clicked icon      | Opened Twitter in seperate tab   | Pass      |
+| Linkedin Icon Link  | Opens Linkedin in seperate browser on click               | Clicked icon      | Opened Linkedin in seperate tab  | Pass      |
+| HOMEPAGE            |                                                           |                   |                                  |
+| Begin! Link         | When clicked user will be directed to username page       | Clicked link      | Redirected to username page      | Pass      |
+| How to play Link    | When clicked user will be redirected to instructions page | Clicked link      | Redirected to instructions page  | Pass      |
+| Leaderboard Link    | When clicked user will be redirected to Leaderboard page  | Clicked link      | Redirected to Leaderboard page   | Pass      |
 
 ### Username Page
 
