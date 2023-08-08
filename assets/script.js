@@ -2,7 +2,6 @@
 
 import { questionBank } from "/assets/js/questionBank.js";
 
-/** 
 const questionBank = [
     {
         questionNumber: 1,
@@ -133,8 +132,6 @@ const questionBank = [
         correctAnswer: "6"
     },
 ];
-
-*/
 
 /** Enter Name Page Function, simply takes text input from name field and
  * stores it as userNameToPass in session storage for use later in the game
