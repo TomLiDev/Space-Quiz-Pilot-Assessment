@@ -116,13 +116,20 @@ In the future I would look at potentially scaling back the background for smalle
 
 Each page was assessed using the WAVE accessibility tool. Every page passed without any errors, please use the links below to view the scores for each page:
 
-- [Homepage WAVE Test](documentation/index-wave.PNG)
-- [Rise page WAVE Test](documentation/rise-wave.PNG)
-- [Reign page WAVE Test](documentation/reign-wave.PNG)
-- [Legacy page WAVE Test](documentation/legacy-wave.PNG)
-- [404 page WAVE Test](documentation/404-wave.PNG)
+- [Homepage WAVE Test](documentation/index-wave.png)
+- [Username page WAVE Test](documentation/username-wave.png)
+- [Quiz Start WAVE Test](documentation/quiz-start-wave.png)
+- [Result page WAVE Test](documentation/result-wave.png)
+- [Leaderboard WAVE Test](documentation/leaderboard-wave.png)
+- [404 page WAVE Test](documentation/error-page-wave.png)
 
-During this testing the auto-refresh on the thank you page was declared as an error. Because of this, and the impact on accessibility score also seen in Lighthouse testing, I decided to remove the automatic refresh. The page includes a clickable link back the homepage anyway, so the requirement for a user to continue using the site is still met. Whilst this is slightly more seamless with the automatic redirect, with the impact on accessibility and user experience, I felt removing the automatic refresh was the best approach.
+A warning which was raised during the wave testing was that the pages used h2 elements instead of h1. As this was a relativley simple change I replaced the h2 elements with h1's where necessary.
+
+Some of the other pages have similar warnings where the WAVE program thought that text was a possible h2, and should have been made as such, but these were for small pieces of text such as "score" inside the final score box, so semantically I didn't think it made sense to make these headings when they are more similar to labels.
+
+The wave testing also flagged the "check leaderboard" button on the results page as redundant, as there was the same link the nav bar, but I kept this in as I felt it was good UX, and I didn't want to change the nav bar purely for one page.
+
+No errors were raised on any page.
 
 ## Manual Testing
 
