@@ -56,11 +56,11 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 #### Homepage Desktop Lighthouse Scores
 
-![Screenshot of homepage desktop lighthouse scores](documentation/index-lighthouse.PNG)
+![Screenshot of homepage desktop lighthouse scores](documentation/index-desktop-lighthouse.png)
 
 #### Homepage Mobile Lighthouse Scores
 
-![Screenshot of homepage mobile lighthouse scores](documentation/index-lighthouse-mobile.PNG)
+![Screenshot of homepage mobile lighthouse scores](documentation/index-lighthouse-mobile.png)
 
 #### Rise Desktop Lighthouse Scores
 

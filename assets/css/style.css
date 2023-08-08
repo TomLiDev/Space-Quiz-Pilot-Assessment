@@ -708,4 +708,87 @@ body {
     #error-page-container {
         height: 400px;
     }
-}
+
+    /** Media query for screens smaller than 300px */
+
+    @media screen and (max-width: 300px) {
+        #start-menu {
+            padding-top: 20px;
+        }
+
+        .nav-items {
+            padding: 10px;
+        }
+
+        #nav-bar {
+            font-size: 100%;
+        }
+
+        .start-buttons {
+            width: 80%;
+            font-size: 120%;
+            height: 50px;
+        }
+
+        #start-menu-container>h2 {
+            font-size: 200%;
+        }
+
+        #start-menu-container>p {
+            font-size: 120%;
+            padding-bottom: 10px;
+        }
+
+        #footer-container {
+            font-size: 200%;
+            margin-top: 0px;
+        }
+
+        #footer-container>a {
+            padding: 20px;
+        }
+
+        #start-menu-container {
+            height: 450px;
+        }
+
+        #score-section {
+            margin-top: 30px;
+            height: 50px;
+            font-size: 120%;
+            border-radius: 30px;
+        }
+
+        .answer-buttons {
+            font-size: 120%;
+        }
+
+        #results-container>h2 {
+            font-size: 200%;
+        }
+
+        #results-container>p {
+            font-size: 130%;
+        }
+
+        #final-score-section {
+            font-size: 150%;
+            height: 15%;
+            width: 90%;
+        }
+
+        #results-container>a {
+            width: 150px;
+        }
+
+        #leaderboard-table {
+            width: 200px;
+            height: 350px;
+            font-size: 100%;
+        }
+
+        #leaderboard-table-container>h2 {
+            font-size: 160%;
+        }
+
+    }
