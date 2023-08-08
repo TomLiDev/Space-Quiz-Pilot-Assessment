@@ -171,6 +171,7 @@ Testing was conducted using Google Chrome, MS Edge and Safari.
 | Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
 | Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
 | Linkedin Icon Link | Opens Linkedin in seperate browser on click | Clicked icon | Opened Linkedin in seperate tab | Pass |
+
 | HOMEPAGE | | | |
 | Begin! Link | When clicked user will be directed to username page | Clicked link | Redirected to username page | Pass |
 | How to play Link | When clicked user will be redirected to instructions page | Clicked link | Redirected to instructions page | Pass |
@@ -195,7 +196,7 @@ FOOTER | | | |
 | Enter Name Field | When clicked placeholder text will clear OR user will get suggestions for previous names | Clicked in field | Placeholder text cleared OR given suggestions to select from previous name which populate field | Pass |
 | Start Quiz! | When clicked user will be redirected to quiz-start page and first question will be presented | Clicked link | Redirected to quiz-start page and first question loaded | Pass |
 
-### Insructions Page
+### Instructions Page
 
 | Feature/Function  | Expected Outcome                            | Method of Test    | Result                       | Pass/Fail |
 | :---------------- | :------------------------------------------ | :---------------- | :--------------------------- | :-------- |
@@ -304,9 +305,7 @@ FOOTER | | | |
 
 4. Answer one question multiple times - For the correct/incorrect styling described above, I wanted the user to have a short period of time to view their answer and whether or not this was correct before the quiz loaded the next question. To do this I simple introduced a short timer from the point on an answer being clicked, until the next question is loaded. This worked well for the styling, a simple 2 second delay worked well to view the styling. However it did introduce the possibility that a user could click multiple answers for the same question, creating a large score from one question. This also has the knock on effect that if a user clicked the correct answer say 4 times, they would get a score of 40 for only answering one question correctly, but also then the quiz would immedialty load through the next 4 questions in quick succession, essentially breaking the quiz. The simple solution would be to remove the delay and have the next question load immediatly when an answer was clicked, but this would make any correct/incorrect answer styling impossible. My mentor suggested a simple solution of disabling the buttons, which I was unaware existed. Having this come into effect when the answer was clicked, and then set back to enabled when the next question was loaded, solved the issue and allowed me to keep the correct/incorrect styling.
 
-5. Leaderboard Ranking - Creating the leaderboard was challening, in particular having a new score and username enter the leaderboard in the correct row and move the other scores accordingly. After trying many different options I eventually found a solution on a stack overflow page which showed how to compare and sort objects in an array by the values of a particular property in that array. This allowed me to create an array from the scores already in the leaderboard, pop the lowest score off this array, enter the new score, sort the array so that the new score was placed in its corresponding rank. Then these values can be fed back into the leaderboard to create a new, updated leaderboard with the users name and score in the correct rank.
-
-Unfortunately the leaderboard does not retain these new updated values permanently, despite exploring options with local storage and document write functions. However after discussing this with my mentor it was explained that a permanently updated leaderboard was considered beyond the scope of this project as it would involve some kind of database which could store the values. This is something I would like to explore in a future version the game.
+5. Leaderboard Ranking - Creating the leaderboard was challening, in particular having a new score and username enter the leaderboard in the correct row and move the other scores accordingly. After trying many different options I eventually found a solution on a stack overflow page which showed how to compare and sort objects in an array by the values of a particular property in that array. This allowed me to create an array from the scores already in the leaderboard, pop the lowest score off this array, enter the new score, sort the array so that the new score was placed in its corresponding rank. Then these values can be fed back into the leaderboard to create a new, updated leaderboard with the users name and score in the correct rank. Unfortunately the leaderboard does not retain these new updated values permanently, despite exploring options with local storage and document write functions. However after discussing this with my mentor it was explained that a permanently updated leaderboard was considered beyond the scope of this project as it would involve some kind of database which could store the values. This is something I would like to explore in a future version the game.
 
 6. Hover on home icon - Initially the hover pseudo class underlined the HOME text and the a line appeared under the globe icon as well. After some restructuring of the HTML the desired effect was achieved.
 
