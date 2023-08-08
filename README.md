@@ -102,7 +102,7 @@ San's serif is used as the back-up font if FONT cannot be loaded for any reason.
 
 I want to keep the imagery quite simple as I don't want too much on-screen to distract from the quiz questions. The main image used will be the space background image, this provides a nice back drop that also has a bit of variety in the colours.
 
-[The background image](documentation/spacequiz-background1.webp)
+[The background image](documentation/space-background1.webp)
 
 I may also use images of planets/stars etc in the leaderboard and other pages that are not quiz question pages to provide variety.
 

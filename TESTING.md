@@ -42,7 +42,7 @@ Later issues on first deploying my website, reviewed with my mentor were:
 
 The W3C validator was used to validate all HTML pages and CSS in the style.css.
 
-- [Screenshot of CSS W3C Validated](documentation/css-validated.PNG)
+- [Screenshot of CSS W3C Validated](documentation/css-w3c-validated.png)
 - [Screenshot of index page W3C Validated](documentation/index-w3c.png)
 - [Screenshot of username page W3C Validated](documentation/username-w3c.png)
 - [Screenshot of quiz start page W3C Validated](documentation/quiz-start-w3c.png)
@@ -60,7 +60,7 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 #### Homepage Mobile Lighthouse Scores
 
-![Screenshot of homepage mobile lighthouse scores](documentation/index-lighthouse-mobile.png)
+![Screenshot of homepage mobile lighthouse scores](documentation/index-mobile-lighthouse.png)
 
 #### Username page Desktop Lighthouse Scores
 
@@ -78,9 +78,9 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 ![Screenshot of Quiz Start mobile lighthouse scores](documentation/quiz-start-mobile-lighthouse.png)
 
-#### Results Page Lighthouse Scores
+#### Results Page Desktop Lighthouse Scores
 
-![Screenshot of Results Page desktop lighthouse scores](documentation/result-desktop-lighthouse.png)
+![Screenshot of Results Page Desktop lighthouse scores](documentation/result-desktop-lighthouse.png)
 
 #### Results Page Mobile Lighthouse Scores
 
@@ -88,7 +88,7 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 #### Leaderboard Desktop Lighthouse Scores
 
-![Screenshot of Leaderboard desktop lighthouse scores](documentation/leaderboard-desktop.png)
+![Screenshot of Leaderboard desktop lighthouse scores](documentation/leaderboard-desktop-lighthouse.png)
 
 #### Leaderboard Mobile Lighthouse Scores
 
@@ -101,8 +101,6 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 #### 404 Error Page Mobile Lighthouse Scores
 
 ![Screenshot of 404 Error Page Mobile lighthouse scores](documentation/error-page-mobile-lighthouse.png)
-
-#### Thankyou page Desktop Lighthouse Score with refresh removed
 
 #### Findings and Actions
 
@@ -169,7 +167,6 @@ Testing was conducted using Google Chrome, MS Edge and Safari.
 | Leaderboard Link  | Return/refresh to Leaderboard page on click | Clicked link      | Returned to Leaderboard page | Pass      |
 | Leaderboard Hover | Underline appears under text.               | Hovered over link | Underline appeared           | Pass      |
 
-FOOTER | | | |
 | Facebook Icon Link | Opens Facebook in seperate browser on click | Clicked icon | Opened Facebook in seperate tab | Pass |
 | Instagram Icon Link | Opens Instagram in seperate browser on click | Clicked icon | Opened Instagram in seperate tab | Pass |
 | Twitter Icon Link | Opens Twitter in seperate browser on click | Clicked icon | Opened Twitter in seperate tab | Pass |
