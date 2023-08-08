@@ -314,5 +314,3 @@ Unfortunately the leaderboard does not retain these new updated values permanent
 6. Hover on home icon - Initially the hover pseudo class underlined the HOME text and the a line appeared under the globe icon as well. After some restructuring of the HTML the desired effect was achieved.
 
 ### Known Issues
-
-2. Map on Rise Page

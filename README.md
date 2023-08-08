@@ -192,15 +192,27 @@ Time permitting, I would like to incorporate some code so that if the player has
 
 ### 404 Error Page
 
+The 404 error page will be shown if there is an error somewhere in the navigation/direction in using the page.
+
+This will incorporate the nav bar and footer links as all the other pages. Centrally, a simple message will inform the user that this is the 404 error page with a link to take the user back to the home page.
+
+![An image of the 404 error page shown on different devices](documentation/error-page-devices.png)
+
 ## Future Implementations/Plans
 
 In the future I would like to incorporate:
 
-A timer - Could be used to make the game more dynamic with a set time in which to answer the question. This could also be used as a way of providing a greater difficulty, with less time to answer a question on the higher difficulty setting.
+A Timer - If I was to create this quiz again, instead of using a fixed number of questions, I would utilise a timer function and have the user answer as many questions as possible. This would make the game more more dynamic and exciting with a "race against the clock" element. I also think it would give a wider range of scores making the leaderboard more interesting, whilst also meaning players could look to play multiple times simply to beat their last score. This would require a much larger question bank than the site currently holds.
 
-User entering a name - I'd like to give the user an option to enter their name when starting the quiz. This would add a nice touch of personalisation and would make the Leaderboard much more interesting.
+Difficulty Options - Different difficulty settings were something I was hoping to incorporate into this version of the quiz. I had moved the question bank constant into a separate dedicated Javascript file, with this to be exported into the HTML pages with the relevant script at the bottom of each HTML page.
 
-Difficulty Options - I'd like to give users the ability to choose between difficulties to give the game longer term appeal for return users and generally increased the scope and playability of the game.
+![Image of separate Javascript file for questions](documentation/seperate-js-questions.png)
+
+This seemed to be working well in the Code Anywhere - Python version of the webiste, however when I played the game on the deployed site from Github pages, the console showed an error Cannot load source. The somewhat broad description of the issue, and the fact that it only appeared in the deployed site, not the python site, with the impending deadline date simply meant I did not have the time to explore and resolve the issue. Therefore unfortunately I was forced to return the questionBank constant back into the original js file and remove the links.
+
+This was a shame as I has explored using chatGBT to do most of the creation for easy, medium and hard question sets which would have greatly reduced the amount of time taken to simply create the questions. From there it would have been relativley simple to incorporate a button/option on the username page for the user to select difficulty, which could then have been used as the value to determine which set of questions were to be loaded into the shuffle questions function. From there the rest of the functions would have worked. The only other aspect which may have needed working would be greater scores for more difficult questions answered correctly, but again this would have been relatively simple to incorporate with an if statement checking the difficulty of the game as the add correct score function.
+
+This is something I will explore further in my own time as it seems valuable not only for this quiz but for using separate Javascript files in future projects.
 
 ### Accessibility
 
