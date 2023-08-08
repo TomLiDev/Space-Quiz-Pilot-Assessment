@@ -107,11 +107,11 @@ const questionBank = [
     },
     {
         questionNumber: 14,
-        questionText: "Approximately, what is the escape velocity of Earth?",
-        answer1: "30,000 kph",
-        answer2: "40,000 kph",
-        answer3: "50,000 kph",
-        correctAnswer: "40,000 kph"
+        questionText: "Halley's comet will next pass Earth in which year?",
+        answer1: "2061",
+        answer2: "2234",
+        answer3: "2089",
+        correctAnswer: "2061"
     },
     {
         questionNumber: 14,
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-let stopCount = 0;
+let stopCount = 1;
 let finalScore = 0;
 
 /** Function to shuffle questions array at start of quiz */
@@ -251,8 +251,6 @@ function checkAnswer() {
     for (let button of buttons) {
         button.disabled = true;
     }
-    setTimeout(questionCounter, 2000);
-
 };
 
 /** Function for Adding score for correct answer */
