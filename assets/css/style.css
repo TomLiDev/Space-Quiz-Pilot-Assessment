@@ -338,6 +338,17 @@ body {
     border-radius: 40px
 }
 
+#results-container>a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    background: aliceblue;
+    justify-content: center;
+    color: black;
+    border-style: outset;
+}
+
 #final-score {
     padding: 10px;
 }
