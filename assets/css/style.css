@@ -104,7 +104,14 @@ body {
 }
 
 #start-menu-items>a {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    background: aliceblue;
+    justify-content: center;
+    color: black;
+    border-style: outset;
 }
 
 /** Footer syling **/

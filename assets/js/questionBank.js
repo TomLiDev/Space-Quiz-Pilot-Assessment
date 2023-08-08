@@ -1,4 +1,3 @@
-/** Question bank, an array of objects to be shuffled at quiz start */
 
 export const questionBank = [
     {
