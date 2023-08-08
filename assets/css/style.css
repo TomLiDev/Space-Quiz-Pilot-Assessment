@@ -34,7 +34,7 @@ body {
     color: aliceblue;
 }
 
-.nav-items:hover {
+*.nav-items>span:hover {
     text-decoration: underline;
     color: aliceblue;
 }
@@ -51,14 +51,6 @@ body {
     text-decoration: none;
     color: aliceblue;
     font-size: 180%;
-}
-
-#logo {
-    background-image: url(../images/earth-icon2.webp);
-    width: 60px;
-    background-size: 60px 60px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 /** Main body and options styling **/
