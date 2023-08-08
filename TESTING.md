@@ -106,12 +106,11 @@ Google chrome Lighthouse tester was used to assess SEO score, acccessibility, co
 
 #### Findings and Actions
 
-Overall I am very pleased with the Lighthouse scores for my pages. Some of the first pages had lower scores on performance, this is due to there being more jpegs in these pages before I started using webp formats. I did explore swapping these, particularly on the background on the homepage, but whilst changing the images was relatively easy, recreating the styling for each image would simply be too time consuming with the project deadline.
+Overall I am very pleased with the Lighthouse scores for my pages. Some of the mobile pages has lower scores for performance, which seemed to be related to the size of the background image. I did consider changing this, however the background was already in a webp format, and worked very well with the overall style and colour scheme. I therefore kept the background as it was only a minor issue on some of the pages from a mobile view.
 
-The thankyou page also had a lower accessibilty score than the other pages, which are consistently very high. This was due to the automatic refresh on the page, which could damage the experience of that page for a user who was accessing through a screen reader or similar software. I wanted to keep this auto refresh in as I thought it was a nice feature to bring the user back to the home page, however I increased the time this would happen from 10 to 30 seconds. Although this did not improve the accessibility score, as the meta attribute was still present, it would in practice give a user more time to tab through the text before the screen was refreshed. However following further accessibility testing (see WAVE section below) this automatic refresh was removed altogether.
-The Lighthouse scores for the thankyou page including the refresh, and those without show a clear improvement in accessibility when the page does not have the refresh.
+The vast majority of the scores however are 100% or extrememly close to, so I am pleased that the work put into accessibility and performance has paid off across the vast majority of the pages.
 
-In the future I would look to replace all the images with webp format images as this would address most of the performance issues which impact the scores.
+In the future I would look at potentially scaling back the background for smaller screen sizes in some way, but from initial investigation this had major impacts on the over all look and feel of the pages, so was not something I could work into the scope of this project.
 
 ### WAVE Testing
 
@@ -121,9 +120,6 @@ Each page was assessed using the WAVE accessibility tool. Every page passed with
 - [Rise page WAVE Test](documentation/rise-wave.PNG)
 - [Reign page WAVE Test](documentation/reign-wave.PNG)
 - [Legacy page WAVE Test](documentation/legacy-wave.PNG)
-- [Form page WAVE Test](documentation/form-wave.PNG)
-- [Thankyou page WAVE Test with automatic refresh](documentation/thankyou-wave-error.PNG)
-- [Thankyou page with refresh removed](documentation/thankyou-wave-fixed.PNG)
 - [404 page WAVE Test](documentation/404-wave.PNG)
 
 During this testing the auto-refresh on the thank you page was declared as an error. Because of this, and the impact on accessibility score also seen in Lighthouse testing, I decided to remove the automatic refresh. The page includes a clickable link back the homepage anyway, so the requirement for a user to continue using the site is still met. Whilst this is slightly more seamless with the automatic redirect, with the impact on accessibility and user experience, I felt removing the automatic refresh was the best approach.

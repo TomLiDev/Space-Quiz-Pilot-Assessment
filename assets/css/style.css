@@ -81,7 +81,7 @@ body {
     align-items: center;
 }
 
-#start-menu-container>h2 {
+#start-menu-container>h1 {
     font-size: 300%;
     padding-bottom: 40px;
     text-transform: uppercase;
@@ -152,7 +152,7 @@ body {
     padding-right: 20px;
 }
 
-#instructions-container>h2 {
+#instructions-container>h1 {
     font-size: 250%;
     padding-bottom: 20px;
     text-transform: uppercase;
@@ -312,7 +312,7 @@ body {
     padding-right: 20px;
 }
 
-#results-container>h2 {
+#results-container>h1 {
     font-size: 300%;
     padding-bottom: 20px;
 }
@@ -383,7 +383,7 @@ body {
     margin-top: 30px;
 }
 
-#leaderboard-table-container>h2 {
+#leaderboard-table-container>h1 {
     font-size: 300%;
     text-transform: uppercase;
     padding-bottom: 30px;
@@ -467,7 +467,7 @@ body {
         width: 80%;
     }
 
-    #start-menu-container>h2 {
+    #start-menu-container>h1 {
         font-size: 250%;
         padding-bottom: 20px;
     }
@@ -505,7 +505,7 @@ body {
         text-align: center;
     }
 
-    #results-container>h2 {
+    #results-container>h1 {
         font-size: 250%;
         padding-bottom: 20px;
     }
@@ -537,7 +537,7 @@ body {
         height: 600px;
     }
 
-    #instructions-container>h2 {
+    #instructions-container>h1 {
         font-size: 200%;
         padding-bottom: 20px;
     }
@@ -567,7 +567,7 @@ body {
         font-size: 130%;
     }
 
-    #leaderboard-table-container>h2 {
+    #leaderboard-table-container>h1 {
         font-size: 250%;
         padding-bottom: 20px;
     }
@@ -593,7 +593,7 @@ body {
         height: 600px;
     }
 
-    #instructions-container>h2 {
+    #instructions-container>h1 {
         font-size: 150%;
         padding-bottom: 0px;
     }
@@ -689,7 +689,7 @@ body {
         font-size: 130%;
     }
 
-    #leaderboard-table-container>h2 {
+    #leaderboard-table-container>h1 {
         font-size: 200%;
     }
 
@@ -730,7 +730,7 @@ body {
             height: 50px;
         }
 
-        #start-menu-container>h2 {
+        #start-menu-container>h1 {
             font-size: 200%;
         }
 
@@ -763,7 +763,7 @@ body {
             font-size: 120%;
         }
 
-        #results-container>h2 {
+        #results-container>h1 {
             font-size: 200%;
         }
 
@@ -787,7 +787,7 @@ body {
             font-size: 100%;
         }
 
-        #leaderboard-table-container>h2 {
+        #leaderboard-table-container>h1 {
             font-size: 160%;
         }
     }
