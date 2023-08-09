@@ -189,7 +189,9 @@ function shuffleQuestions(questionBank) {
     return questionBank;
 };
 
-/** Function to load first question */
+/** Function to load first question, a seperate first question function 
+ * is required to facilitate question count.
+ */
 
 function firstQuestion() {
     let i = 0;
