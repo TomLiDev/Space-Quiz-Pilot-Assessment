@@ -303,3 +303,5 @@ Testing was conducted using Google Chrome, MS Edge and Safari.
 6. Hover on home icon - Initially the hover pseudo class underlined the HOME text and the a line appeared under the globe icon as well. After some restructuring of the HTML the desired effect was achieved.
 
 ### Known Issues
+
+1. Leaderboard Revisit - If revisiting the leaderboard after having played the quiz once, the function to alert and update the leaderboard will run, even if you have only played the game once. The solution to this was to use some kind of value which was set to true/yes when a quiz was started and then set to no/off after the leaderboard function had been performed, so that the alerts and leaderboard update would not be run if the leaderboard revisited. However as the leaderboard does not store updates permanently, I wanted a player to be able to return after a single play and still be able to see where their score ranked, so I decided the trade off for having the alerts run on every revisit was worthwhile, as the score could still be seen in the leaderboard if desired.
