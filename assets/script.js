@@ -151,10 +151,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementsByTagName("body")[0].id === "username") {
         let button = document.getElementById("start-quiz-button");
         button.addEventListener("click", getUserName);
-    };
+    }
     if (document.getElementsByTagName("body")[0].id === "result") {
         setTimeout(resultDisplay, 100);
-    };
+    }
     if (document.getElementsByTagName("body")[0].id === "leaderboard-page") {
         setTimeout(createLeaderboardArray, 100);
         let button = document.getElementById("start-quiz-leaderboard-button");
@@ -184,10 +184,10 @@ function shuffleQuestions(questionBank) {
 
         [questionBank[currentIndex], questionBank[randomIndex]] = [
             questionBank[randomIndex], questionBank[currentIndex]];
-    };
+    }
     firstQuestion();
     return questionBank;
-};
+}
 
 /** Function to load first question, a seperate first question function 
  * is required to facilitate question count.
@@ -203,7 +203,7 @@ function firstQuestion() {
     let currentQuestionCorrectAnswer = questionBank[i].correctAnswer;
 
     setCorrectAnswer(currentQuestionCorrectAnswer);
-};
+}
 
 /** Function for every subsequent question after first */
 
@@ -219,7 +219,7 @@ function nextQuestion(currentCount) {
         setCorrectAnswer(currentQuestionCorrectAnswer);
         return currentQuestionCorrectAnswer;
     }
-};
+}
 
 /** Function to set correct answer */
 
@@ -230,9 +230,9 @@ function setCorrectAnswer(currentQuestionCorrectAnswer) {
             button.setAttribute("data-type", "correct");
         } else {
             button.setAttribute("data-type", "wrong");
-        };
-    };
-};
+        }
+    }
+}
 
 /** Check Answer Function */
 
@@ -248,12 +248,12 @@ function checkAnswer() {
                 button.className = "correct-answer-button";
         }
         wrongAnswer();
-    };
+    }
 
     for (let button of buttons) {
         button.disabled = true;
     }
-};
+}
 
 /** Function for Adding score for correct answer */
 
@@ -265,13 +265,13 @@ function addCorrectScore() {
     setTimeout(questionStyleReset, 2000);
 
     return finalScore;
-};
+}
 
 /** Wrong Answer Function */
 
 function wrongAnswer() {
     setTimeout(questionStyleReset, 2000);
-};
+}
 
 /** Function to return answer buttons back to normal style, called after
  * either a correct or incorrect answer
@@ -292,7 +292,7 @@ function questionStyleReset() {
         button.disabled = false;
     }
     questionCounter();
-};
+}
 
 /** Question Counter Function */
 
@@ -314,7 +314,7 @@ function endQuiz(finalScore) {
     location.assign("result.html");
     document.getElementById("final-score").innerHTML = finalScore;
     document.getElementById("final-score").innerHTML = sessionStorage.getItem("scoreToPass");
-};
+}
 
 /** Results page function */
 
@@ -366,7 +366,7 @@ function findLowestScore() {
         }
     }
     checkIfScoreLeaderboard();
-};
+}
 
 /** Function to see if the users score is greater than the lowest score 
  * currently on the leaderboard.
@@ -381,7 +381,7 @@ function checkIfScoreLeaderboard() {
         alert("Well done!");
         createNewLeaderboard();
     }
-};
+}
 
 /** First function called if user score is high enough to make the leaderboard.
  * Function removes (pops) lowest score off the existing leaderboard array.
