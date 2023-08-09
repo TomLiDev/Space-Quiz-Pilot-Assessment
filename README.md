@@ -110,13 +110,19 @@ Some simple icons will also be used but the pages will be without big images as 
 
 ### Wireframes
 
-Please use the links below to view the relevant wireframe.
+Please use the links below to view the relevant wireframes, both desktop and mobile for each page.
 
-[Homepage Wireframe](https://share.balsamiq.com/c/v3qHooymfGyyEyCx9uEb9t.png)
+[Homepage Wireframes](documentation/wireframe-index.png)
 
-[Homepage Mobile Wireframe](https://share.balsamiq.com/c/kboxySvsPoZ6vGataXtcPX.png)
+[Username Wireframe](documentation/wireframe-index.png)
 
-[404 Desktop and Mobile Wireframe](https://share.balsamiq.com/c/tzDT9VJSwPWJCvZkviFija.png)
+[Quiz Start Wireframe](documentation/wireframe-quiz-start.png)
+
+[Results Wireframe](documentation/wireframe-results.png)
+
+[Leaderboard Wireframe](documentation/wireframe-results.png)
+
+[404 Error page Wireframe](documentation/wireframe-error-page.png)
 
 ## Features
 
