@@ -206,7 +206,7 @@ function firstQuestion() {
 /** Function for every subsequent question after first */
 
 function nextQuestion(currentCount) {
-    while (currentCount < 10) {
+    while (currentCount < 9) {
         document.getElementById("question-text").innerHTML = questionBank[currentCount].questionText;
         document.getElementById("answer1").innerHTML = questionBank[currentCount].answer1;
         document.getElementById("answer2").innerHTML = questionBank[currentCount].answer2;
@@ -295,7 +295,7 @@ function questionStyleReset() {
 /** Question Counter Function */
 
 function questionCounter() {
-    if (stopCount < 10) {
+    if (stopCount < 9) {
         let currentCount = stopCount++;
         nextQuestion(currentCount);
         return currentCount;
